@@ -42,12 +42,20 @@ namespace Medical_laboratory.Pages
 
         private void closedEye_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            password.Visibility = Visibility.Visible;
+            password1.Visibility = Visibility.Hidden;
+            openEye.Visibility = Visibility.Visible;
+            closedEye.Visibility = Visibility.Hidden;
+            password.Password = password1.Text;
         }
 
         private void openEye_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            password.Visibility = Visibility.Hidden;
+            password1.Visibility = Visibility.Visible;
+            openEye.Visibility = Visibility.Hidden;
+            closedEye.Visibility = Visibility.Visible;
+            password1.Text = password.Password;
         }
 
         private void Reg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

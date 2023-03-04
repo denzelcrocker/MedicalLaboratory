@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Medical_laboratory"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
+        WindowStartupLocation="CenterScreen"
         Title="Laboratory" Height="1080" Width="1920" Loaded="Window_Loaded">
     <Grid>
         <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#FFC6D7FF"></Frame>
