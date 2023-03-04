@@ -1,5 +1,4 @@
-﻿using Medical_laboratory.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Medical_laboratory
+namespace Medical_laboratory.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Registration : Page
     {
-        public MainWindow()
+        public Registration()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Autorization(MainFrame));
-        }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
-
 }

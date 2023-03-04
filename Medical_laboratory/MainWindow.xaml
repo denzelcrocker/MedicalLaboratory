@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Laboratory" Height="1080" Width="1920" Loaded="Window_Loaded">
     <Grid>
-        <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background=""></Frame>
+        <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#FFC6D7FF"></Frame>
     </Grid>
 </Window>
