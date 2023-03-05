@@ -85,12 +85,14 @@ namespace Medical_laboratory.Pages
                 {
                     checkAutorization = true;
                     user = users[i];
+
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
             }
             if (checkAutorization  == false)
             {
                 MessageBox.Show("Неправильный логин или пароль");
+                Manager.frame.Navigate(new CheckCapcha());
             }
         }
     }
