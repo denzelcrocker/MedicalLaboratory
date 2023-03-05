@@ -17,6 +17,14 @@
                Foreground="#003d34" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift" Margin="10,50,0,970"/>
+               FontFamily="Bahnschrift"
+               Margin="10,40,0,970"/>
+        <Image 
+            HorizontalAlignment="Left"
+            Height="80"
+            Margin="1780,24,0,0"
+            VerticalAlignment="Top"
+            Width="100"
+            Source="/Images/log-out.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
     </Grid>
 </Page>

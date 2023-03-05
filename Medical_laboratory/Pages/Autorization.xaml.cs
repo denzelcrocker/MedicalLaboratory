@@ -34,12 +34,10 @@ namespace Medical_laboratory.Pages
         {
 
         }
-
         private void password_TextChanged(object sender, TextChangedEventArgs e)
         {
             
         }
-
         private void closedEye_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             password.Visibility = Visibility.Visible;
@@ -48,7 +46,6 @@ namespace Medical_laboratory.Pages
             closedEye.Visibility = Visibility.Hidden;
             password.Password = password1.Text;
         }
-
         private void openEye_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             password.Visibility = Visibility.Hidden;
@@ -57,14 +54,10 @@ namespace Medical_laboratory.Pages
             closedEye.Visibility = Visibility.Visible;
             password1.Text = password.Password;
         }
-
         private void Reg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            
             Manager.frame.Navigate(new Registration());
-
         }
-
         private void Enter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             ApplicationContext db = new ApplicationContext();
@@ -99,10 +92,6 @@ namespace Medical_laboratory.Pages
             {
                 MessageBox.Show("Неправильный логин или пароль");
             }
-
-
-
-
         }
     }
 }

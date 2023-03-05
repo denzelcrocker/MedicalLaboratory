@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Images\logo.png" />
     <None Remove="Pages\closedEye.png" />
+    <None Remove="Pages\log-out.png" />
     <None Remove="Pages\OpenEye.png" />
   </ItemGroup>
 
@@ -28,8 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Pages\closedEye.png" />
-    <Resource Include="Pages\OpenEye.png" />
+    <Resource Include="Images\closedEye.png" />
+    <Resource Include="Images\log-out.png" />
+    <Resource Include="Images\openEye.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -35,5 +35,9 @@ namespace Medical_laboratory.Pages
             }
 
         }
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Manager.frame.Navigate(new Autorization());
+        }
     }
 }
