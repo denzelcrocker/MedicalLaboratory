@@ -22,6 +22,7 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class Autorization : Page
     {
+        public int countForCapcha = 3;
         DateTime date;
         public Autorization()
         {
@@ -91,8 +92,17 @@ namespace Medical_laboratory.Pages
             }
             if (checkAutorization  == false)
             {
-                MessageBox.Show("Неправильный логин или пароль");
-                Manager.frame.Navigate(new CheckCapcha());
+                if (countForCapcha == 0)
+                {
+                    countForCapcha = 3;
+                    MessageBox.Show("Попытки закончились");
+                    Manager.frame.Navigate(new CheckCapcha());
+                }
+                else
+                {
+                    MessageBox.Show($"Неверный логин или пароль, осталось попыток: {countForCapcha}") ;
+                    countForCapcha--;
+                }
             }
         }
     }
