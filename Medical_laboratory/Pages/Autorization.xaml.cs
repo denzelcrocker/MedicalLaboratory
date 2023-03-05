@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using Microsoft.EntityFrameworkCore;
 using System.Windows.Shapes;
+using Medical_laboratory.Entities;
 
 namespace Medical_laboratory.Pages
 {
@@ -20,14 +22,12 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class Autorization : Page
     {
-        Frame frame1;
         DateTime date;
-        public Autorization(Frame frame)
+        public Autorization()
         {
             InitializeComponent();
             password1.Visibility = Visibility.Hidden;
             closedEye.Visibility = Visibility.Hidden;
-            frame1 = frame;
             date = DateTime.Now;
         }
         private void login_TextChanged(object sender, TextChangedEventArgs e)
@@ -60,11 +60,48 @@ namespace Medical_laboratory.Pages
 
         private void Reg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            
+            Manager.frame.Navigate(new Registration());
 
         }
 
         private void Enter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            ApplicationContext db = new ApplicationContext();
+            bool isEmployee = false;
+            bool checkAutorization = false;
+            string userLogin = login.Text;
+            string userPassword = password.Password;
+            int countOfUsers = db.Users.Count();
+            int countOfEmployees = db.Employees.Count();
+            employees = db.Employees.ToList();
+            users = db.Users.ToList();
+            for (int i = 0; i < countOfEmployees; i++)
+            {
+                if (employees[i].Login == userLogin && employees[i].Password == userPassword)
+                {
+                    isEmployee = true;
+                    checkAutorization = true;
+                    employee = employees[i];
+                    Manager.frame.Navigate(new MainPage(isEmployee));
+                }
+            }
+            for (int i = 0; i < countOfUsers; i++)
+            {
+                if (users[i].Login == userLogin && users[i].Password == userPassword)
+                {
+                    checkAutorization = true;
+                    user = users[i];
+                    Manager.frame.Navigate(new MainPage(isEmployee));
+                }
+            }
+            if (checkAutorization  == false)
+            {
+                MessageBox.Show("Неправильный логин или пароль");
+            }
+
+
+
 
         }
     }

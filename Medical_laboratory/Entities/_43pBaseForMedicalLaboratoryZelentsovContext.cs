@@ -70,7 +70,7 @@ public partial class _43pBaseForMedicalLaboratoryZelentsovContext : DbContext
         modelBuilder.Entity<Role>(entity =>
         {
             entity.Property(e => e.RoleId).ValueGeneratedNever();
-            entity.Property(e => e.Role1).HasColumnName("Role");
+            entity.Property(e => e.NameOfRole).HasColumnName("NameOfRole");
         });
 
         modelBuilder.Entity<Service>(entity =>

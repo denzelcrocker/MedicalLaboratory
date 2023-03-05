@@ -25,5 +25,9 @@ namespace Medical_laboratory
                 optionsBuilder.UseSqlServer(@"Server=ngknn.ru;Database=43P_BaseForMedicalLaboratoryZelentsov;User ID = 33П; Password = 12357; TrustServerCertificate = true");
             }
         }
+        public static User user;
+        public static Employee employee;
+        public static List<Employee> employees = new List<Employee>();
+        public static List<User> users = new List<User>();
     }
 }

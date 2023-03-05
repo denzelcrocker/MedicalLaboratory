@@ -50,7 +50,7 @@
                      Width="520" 
                      Margin="0,543,0,477" 
                      FontSize="35"/>
-        <TextBlock x:Name="Autorization"
+        <TextBlock x:Name="Click"
                    Text="Вход" 
                    TextDecorations="Underline" 
                    TextAlignment="Center"
@@ -62,7 +62,7 @@
                    FontSize="50" Margin="0,652,0,359" 
                    FontFamily="Bahnschrift" 
                    Cursor="Hand" MouseLeftButtonDown="Enter_MouseLeftButtonDown"/>
-        <TextBlock x:Name="Registration"
+        <TextBlock x:Name="RegistrationClick"
                    Text="Зарегистрироваться"
                    TextDecorations="Underline" 
                    TextAlignment="Center"

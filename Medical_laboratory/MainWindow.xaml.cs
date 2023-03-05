@@ -24,11 +24,12 @@ namespace Medical_laboratory
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Autorization(MainFrame));
+            Manager.frame = MainFrame;
+            Manager.frame.Navigate(new Autorization());
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 
