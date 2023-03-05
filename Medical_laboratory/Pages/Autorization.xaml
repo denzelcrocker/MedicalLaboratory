@@ -9,25 +9,23 @@
       Title="Autorization">
 
 
-    <Grid Width="1200" Height="700">
-
+    <Grid Width="1920" Height="1080">
         <Label Content="Логин" 
                FontSize="40"
                Height="60"
                Width="128"
-               Margin="0,111,0,529"
                HorizontalAlignment="Center"
-               Foreground="White" 
+               Foreground="#003d34" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift"/>
+               FontFamily="Bahnschrift" Margin="0,366,0,654"/>
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  x:Name="login" 
                  TextWrapping="Wrap" 
                  TextChanged="login_TextChanged" 
                  Height="60"
                  Width="520" 
-                 Margin="340,176,340,464" 
+                 Margin="700,423,700,597" 
                  FontSize="40" 
                  TextAlignment="Left"/>
         <Label Content="Пароль" 
@@ -35,24 +33,24 @@
                Height="60"
                HorizontalAlignment="Center"
                Width="150" 
-               Margin="0,236,0,404"
-               Foreground="White" 
+               Margin="0,483,0,537"
+               Foreground="#003d34" 
                FontFamily="Bahnschrift"/>
         <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" 
                      x:Name="password" 
                      HorizontalAlignment="Center" 
                      Height="60"
                      Width="520" 
-                     Margin="0,296,0,344" 
-                     FontSize="40" />
+                     Margin="0,543,0,477" 
+                     FontSize="35" />
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
                      x:Name="password1" 
                      HorizontalAlignment="Center" 
                      Height="60"
                      Width="520" 
-                     Margin="0,296,0,344" 
-                     FontSize="40" />
-        <TextBlock x:Name="Enter"
+                     Margin="0,543,0,477" 
+                     FontSize="35"/>
+        <TextBlock x:Name="Autorization"
                    Text="Вход" 
                    TextDecorations="Underline" 
                    TextAlignment="Center"
@@ -60,35 +58,41 @@
                    HorizontalAlignment="Center"
                    Width="150"
                    FontWeight="Bold" 
-                   Foreground="White"
-                   FontSize="50" Margin="0,387,0,247" 
+                   Foreground="#003d34"
+                   FontSize="50" Margin="0,652,0,359" 
                    FontFamily="Bahnschrift" 
                    Cursor="Hand" MouseLeftButtonDown="Enter_MouseLeftButtonDown"/>
-
-
-        <TextBlock x:Name="Reg"
+        <TextBlock x:Name="Registration"
                    Text="Зарегистрироваться"
                    TextDecorations="Underline" 
                    TextAlignment="Center"
                    TextWrapping="WrapWithOverflow"
-                   HorizontalAlignment="Left"
-                   Width="299"
+                   HorizontalAlignment="Center"
+                   Width="298"
                    FontWeight="Bold" 
-                   Foreground="White"
-                   FontSize="30" Margin="437,602,0,56" 
+                   Foreground="#003d34"
+                   FontSize="30" Margin="0,914,0,122" 
                    FontFamily="Bahnschrift" 
                    Cursor="Hand" 
                    MouseLeftButtonDown="Reg_MouseLeftButtonDown"/>
         <Image 
             x:Name="closedEye"
-            Height="33"
+            Height="34"
             Width="33"
             Source="/Pages/closedEye.png"
-            Margin="800,310,0,0"
+            Margin="1164,557,0,0"
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
             MouseLeftButtonDown="closedEye_MouseLeftButtonDown"/>
-        <Image x:Name="openEye" Height="33" Width="33" Source="/Pages/OpenEye.png" Margin="800,310,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="openEye_MouseLeftButtonDown"/>
+        <Image
+            x:Name="openEye"
+            Height="32"
+            Width="34"
+            Source="/Pages/OpenEye.png"
+            Margin="1164,557,0,0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            MouseLeftButtonDown="openEye_MouseLeftButtonDown"/>
 
     </Grid>
 </Page>

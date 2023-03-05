@@ -7,7 +7,9 @@
         mc:Ignorable="d" 
         WindowStartupLocation="CenterScreen"
         Title="Laboratory" Height="1080" Width="1920" Loaded="Window_Loaded">
-    <Grid>
-        <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#FFC6D7FF"></Frame>
-    </Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#94ebd8"></Frame>
+        </Grid>
+    </ScrollViewer>
 </Window>
