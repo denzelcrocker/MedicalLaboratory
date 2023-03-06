@@ -10,6 +10,26 @@
     <ScrollViewer HorizontalScrollBarVisibility="Auto">
         <Grid>
             <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#94ebd8" ></Frame>
+            <Label Content="Осталось до кварцевания:"
+               HorizontalAlignment="Left"
+               Margin="1423,977,0,0"
+               VerticalAlignment="Top"
+               FontSize="30"
+               Foreground="#003d34"/>
+            <TextBox x:Name="Time"
+                   Text="{Binding TickCounter,
+                 RelativeSource={RelativeSource FindAncestor,
+                 AncestorType={x:Type local:MainWindow}}}"
+                 HorizontalAlignment="Left"
+                 Margin="1806,984,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="74"
+                 Background="{x:Null}"
+                 FontSize="30"
+                 Foreground="#003d34"
+                 BorderBrush="{x:Null}"
+                 IsEnabled="False"/>
         </Grid>
     </ScrollViewer>
 </Window>

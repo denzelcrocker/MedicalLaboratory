@@ -102,5 +102,19 @@
             FontSize="40" 
             Foreground="White" 
             FontFamily="Bahnschrift" Click="Button_Click"/>
+        <TextBlock x:Name="Click"
+                   Text="Назад" 
+                   TextDecorations="Underline" 
+                   TextAlignment="Center"
+                   TextWrapping="WrapWithOverflow"
+                   HorizontalAlignment="Left"
+                   Width="150"
+                   FontWeight="Bold" 
+                   Foreground="#003d34"
+                   FontSize="40" 
+                   Margin="10,10,0,1001" 
+                   FontFamily="Bahnschrift" 
+                   Cursor="Hand"
+                   MouseLeftButtonDown="Click_MouseLeftButtonDown"/>
     </Grid>
 </Page>

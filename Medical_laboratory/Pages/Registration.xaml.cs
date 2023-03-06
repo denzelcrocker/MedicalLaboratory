@@ -56,5 +56,10 @@ namespace Medical_laboratory.Pages
                 MessageBox.Show("Введены некорректные данные");
             }
         }
+
+        private void Click_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Manager.frame.Navigate(new Autorization());
+        }
     }
 }
