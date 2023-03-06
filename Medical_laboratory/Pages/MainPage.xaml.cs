@@ -39,5 +39,10 @@ namespace Medical_laboratory.Pages
         {
             Manager.frame.Navigate(new Autorization());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

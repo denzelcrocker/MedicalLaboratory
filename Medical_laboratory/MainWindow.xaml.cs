@@ -80,5 +80,4 @@ namespace Medical_laboratory
             }
         }
     }
-
 }

@@ -13,6 +13,8 @@
     <None Remove="Pages\closedEye.png" />
     <None Remove="Pages\log-out.png" />
     <None Remove="Pages\OpenEye.png" />
+    <None Remove="Pages\results.png" />
+    <None Remove="Pages\services.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +34,8 @@
     <Resource Include="Images\closedEye.png" />
     <Resource Include="Images\log-out.png" />
     <Resource Include="Images\openEye.png" />
+    <Resource Include="Images\services.png" />
+    <Resource Include="Images\results.png" />
   </ItemGroup>
 
   <ItemGroup>
