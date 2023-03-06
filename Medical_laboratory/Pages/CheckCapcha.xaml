@@ -11,32 +11,33 @@
     <Grid>
         <TextBox
             Style="{DynamicResource TextBoxStyle1}" 
-                 x:Name="capchaOut" 
-                 TextWrapping="Wrap" 
-                 Height="70"
-                 Width="350" 
-                 FontSize="40" 
-                 TextAlignment="Center"
-                IsEnabled="False"
+            x:Name="capchaOut" 
+            TextWrapping="Wrap" 
+            Height="70"
+            Width="350" 
+            FontSize="40" 
+            TextAlignment="Center"
+            IsEnabled="False"
             Margin="50,127,50,237"/>
-        <TextBox Style="{DynamicResource TextBoxStyle1}" 
-                 x:Name="capchaIn" 
-                 TextWrapping="Wrap" 
-                 Height="70"
-                 Width="350" 
-                 FontSize="40" 
-                 TextAlignment="Center" Margin="50,229,50,135"/>
+        <TextBox 
+            Style="{DynamicResource TextBoxStyle1}" 
+            x:Name="capchaIn" 
+            TextWrapping="Wrap" 
+            Height="70"
+            Width="350" 
+            FontSize="40" 
+            TextAlignment="Center" Margin="50,229,50,135"/>
         <TextBlock 
-               Text="Пожалуйста, Подтвердите, что вы не робот"
-               TextWrapping="Wrap"
-                TextAlignment="Center"
-               FontSize="30"
-               Width="386"
-               HorizontalAlignment="Center"
-               Foreground="#003d34" 
-               FontWeight="Normal" 
-               FontStyle="Normal" 
-               FontFamily="Bahnschrift" Margin="0,368,0,625"/>
+            Text="Пожалуйста, Подтвердите, что вы не робот"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontSize="30"
+            Width="386"
+            HorizontalAlignment="Center"
+            Foreground="#003d34" 
+            FontWeight="Normal" 
+            FontStyle="Normal" 
+            FontFamily="Bahnschrift" Margin="0,368,0,625"/>
         <Button 
             Style="{DynamicResource ButtonStyle1}" 
             Content="Подтвердить" HorizontalAlignment="Center"

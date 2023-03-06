@@ -29,5 +29,6 @@ namespace Medical_laboratory
         public static Employee employee;
         public static List<Employee> employees = new List<Employee>();
         public static List<User> users = new List<User>();
+        public static ApplicationContext db;
     }
 }
