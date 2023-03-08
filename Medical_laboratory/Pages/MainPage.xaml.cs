@@ -20,6 +20,7 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class MainPage : Page
     {
+
         public MainPage(bool isEmployee)
         {
             InitializeComponent();
@@ -43,6 +44,16 @@ namespace Medical_laboratory.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Services_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.frame.Navigate(new ViewServices());
+        }
+
+        private void Button_Results_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.frame.Navigate(new ViewRezults());
         }
     }
 }

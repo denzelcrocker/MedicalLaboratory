@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="MainPage">
-
-    <Grid>
-        <TextBlock 
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <TextBlock 
                x:Name="userInfo"   
                FontSize="40"
                Height="60"
@@ -19,42 +19,43 @@
                FontStyle="Normal" 
                FontFamily="Bahnschrift"
                Margin="10,40,0,970"/>
-        <Image 
+            <Image 
             HorizontalAlignment="Left"
             Height="80"
             Margin="1780,24,0,0"
             VerticalAlignment="Top"
             Width="100"
             Source="/Images/log-out.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
-        <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="244,252,1136,252">
-            <Button.Content>
-                <StackPanel>
-                    <Image 
+            <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="244,252,1095,252" Click="Button_Services_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <Image 
                         Source="/Images/services.png"
                         Width="3.6in"/>
-                    <Label
+                        <Label
                         Content="Услуги" 
                         FontFamily="Bahnschrift"
                         FontSize="80" 
                         Foreground="White"
                         HorizontalAlignment="Center"/>
-                </StackPanel>
-            </Button.Content>
-        </Button>
-        <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="1100,252,244,252">
-            <Button.Content>
-                <StackPanel>
-                    <Image 
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="1100,252,244,252" Click="Button_Results_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <Image 
                         Source="/Images/results.png"
                         Width="3.6in"/>
-                    <Label
+                        <Label
                         Content="Протоколы" 
                         FontFamily="Bahnschrift"
                         FontSize="80" 
                         Foreground="White"
                         HorizontalAlignment="Center"/>
-                </StackPanel>
-            </Button.Content>
-        </Button>
-    </Grid>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </ScrollViewer>
 </Page>

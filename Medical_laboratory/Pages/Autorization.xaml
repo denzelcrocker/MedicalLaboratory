@@ -8,9 +8,9 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Autorization">
 
-
-    <Grid Width="1920" Height="1080">
-        <Label Content="Логин" 
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid Width="1920" Height="1080">
+            <Label Content="Логин" 
                FontSize="40"
                Height="60"
                Width="128"
@@ -19,7 +19,7 @@
                FontWeight="Normal" 
                FontStyle="Normal" 
                FontFamily="Bahnschrift" Margin="0,366,0,654"/>
-        <TextBox Style="{DynamicResource TextBoxStyle1}" 
+            <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  x:Name="login" 
                  TextWrapping="Wrap" 
                  TextChanged="login_TextChanged" 
@@ -28,7 +28,7 @@
                  Margin="700,423,700,597" 
                  FontSize="40" 
                  TextAlignment="Left"/>
-        <Label Content="Пароль" 
+            <Label Content="Пароль" 
                FontSize="40"
                Height="60"
                HorizontalAlignment="Center"
@@ -36,21 +36,21 @@
                Margin="0,483,0,537"
                Foreground="#003d34" 
                FontFamily="Bahnschrift"/>
-        <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" 
+            <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" 
                      x:Name="password" 
                      HorizontalAlignment="Center" 
                      Height="60"
                      Width="520" 
                      Margin="0,543,0,477" 
                      FontSize="35" />
-        <TextBox Style="{DynamicResource TextBoxStyle1}" 
+            <TextBox Style="{DynamicResource TextBoxStyle1}" 
                      x:Name="password1" 
                      HorizontalAlignment="Center" 
                      Height="60"
                      Width="520" 
                      Margin="0,543,0,477" 
                      FontSize="35"/>
-        <TextBlock x:Name="Click"
+            <TextBlock x:Name="Click"
                    Text="Вход" 
                    TextDecorations="Underline" 
                    TextAlignment="Center"
@@ -62,7 +62,7 @@
                    FontSize="50" Margin="0,652,0,359" 
                    FontFamily="Bahnschrift" 
                    Cursor="Hand" MouseLeftButtonDown="Enter_MouseLeftButtonDown"/>
-        <TextBlock x:Name="RegistrationClick"
+            <TextBlock x:Name="RegistrationClick"
                    Text="Зарегистрироваться"
                    TextDecorations="Underline" 
                    TextAlignment="Center"
@@ -75,7 +75,7 @@
                    FontFamily="Bahnschrift" 
                    Cursor="Hand" 
                    MouseLeftButtonDown="Reg_MouseLeftButtonDown"/>
-        <Image 
+            <Image 
             x:Name="closedEye"
             Height="34"
             Width="33"
@@ -84,7 +84,7 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
             MouseLeftButtonDown="closedEye_MouseLeftButtonDown"/>
-        <Image
+            <Image
             x:Name="openEye"
             Height="32"
             Width="34"
@@ -93,6 +93,6 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
             MouseLeftButtonDown="openEye_MouseLeftButtonDown"/>
-
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Page>

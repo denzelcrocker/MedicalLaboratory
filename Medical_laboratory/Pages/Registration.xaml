@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Registration">
-
-    <Grid>
-        <TextBox 
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="nameOfUser" 
             TextWrapping="Wrap" 
@@ -18,7 +18,7 @@
             FontSize="40" 
             TextAlignment="Left"
             Margin="785,233,785,777"/>
-        <TextBox 
+            <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="loginOfUser" 
             TextWrapping="Wrap" 
@@ -27,7 +27,7 @@
             FontSize="40" 
             TextAlignment="Left"
             Margin="785,378,785,632"/>
-        <TextBox 
+            <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="passwordOfUser" 
             TextWrapping="Wrap"
@@ -36,7 +36,7 @@
             FontSize="40" 
             TextAlignment="Left"
             Margin="785,520,785,490"/>
-        <TextBox 
+            <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="passwordRepeatOfUser" 
             TextWrapping="Wrap"
@@ -45,7 +45,7 @@
             FontSize="40" 
             TextAlignment="Left"
             Margin="785,663,785,347"/>
-        <TextBlock 
+            <TextBlock 
             Text="Инициалы"
             TextWrapping="Wrap"
             TextAlignment="Center"
@@ -57,7 +57,7 @@
             FontStyle="Normal" 
             FontFamily="Bahnschrift"
             Margin="0,180,0,852"/>
-        <TextBlock 
+            <TextBlock 
             Text="Логин"
             TextWrapping="Wrap"
             TextAlignment="Center"
@@ -68,7 +68,7 @@
             FontWeight="Normal" 
             FontStyle="Normal" 
             FontFamily="Bahnschrift" Margin="0,323,0,709"/>
-        <TextBlock 
+            <TextBlock 
             Text="Пароль"
             TextWrapping="Wrap"
             TextAlignment="Center"
@@ -80,7 +80,7 @@
             FontStyle="Normal" 
             FontFamily="Bahnschrift"
             Margin="0,465,0,567"/>
-        <TextBlock 
+            <TextBlock 
             Text="Повтор пароля"
             TextWrapping="Wrap"
             TextAlignment="Center"
@@ -92,7 +92,7 @@
             FontStyle="Normal" 
             FontFamily="Bahnschrift"
             Margin="0,609,0,423"/>
-        <Button 
+            <Button 
             Style="{DynamicResource ButtonStyle1}" 
             Content="Регистрация"
             HorizontalAlignment="Center"
@@ -102,7 +102,7 @@
             FontSize="40" 
             Foreground="White" 
             FontFamily="Bahnschrift" Click="Button_Click"/>
-        <TextBlock x:Name="Click"
+            <TextBlock x:Name="Click"
                    Text="Назад" 
                    TextDecorations="Underline" 
                    TextAlignment="Center"
@@ -116,5 +116,6 @@
                    FontFamily="Bahnschrift" 
                    Cursor="Hand"
                    MouseLeftButtonDown="Click_MouseLeftButtonDown"/>
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Page>

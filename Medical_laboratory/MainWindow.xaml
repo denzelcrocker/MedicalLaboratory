@@ -7,16 +7,16 @@
         mc:Ignorable="d" 
         WindowStartupLocation="CenterScreen"
         Title="Laboratory" Height="1080" Width="1920" Loaded="Window_Loaded">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto">
-        <Grid>
-            <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#94ebd8" ></Frame>
-            <Label Content="Осталось до кварцевания:"
+
+    <Grid>
+        <Frame NavigationUIVisibility='Hidden' Name="MainFrame" Background="#94ebd8" ></Frame>
+        <Label Content="Осталось до кварцевания:"
                HorizontalAlignment="Left"
                Margin="1423,950,0,0"
                VerticalAlignment="Top"
                FontSize="30"
                Foreground="#003d34"/>
-            <TextBox x:Name="Time"
+        <TextBox x:Name="Time"
                    Text="{Binding TickCounter,
                  RelativeSource={RelativeSource FindAncestor,
                  AncestorType={x:Type local:MainWindow}}}"
@@ -30,6 +30,5 @@
                  Foreground="#003d34"
                  BorderBrush="{x:Null}"
                  IsEnabled="False"/>
-        </Grid>
-    </ScrollViewer>
+    </Grid>
 </Window>

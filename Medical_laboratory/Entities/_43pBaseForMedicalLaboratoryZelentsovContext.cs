@@ -76,7 +76,7 @@ public partial class _43pBaseForMedicalLaboratoryZelentsovContext : DbContext
         modelBuilder.Entity<Service>(entity =>
         {
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
-            entity.Property(e => e.Service1).HasColumnName("Service");
+            entity.Property(e => e.NameOfService).HasColumnName("Service");
         });
 
         OnModelCreatingPartial(modelBuilder);

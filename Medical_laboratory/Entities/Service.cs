@@ -7,7 +7,7 @@ public partial class Service
 {
     public int ServiceId { get; set; }
 
-    public string? Service1 { get; set; }
+    public string? NameOfService { get; set; }
 
     public decimal? Price { get; set; }
 
