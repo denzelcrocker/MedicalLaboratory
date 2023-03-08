@@ -10,14 +10,73 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BackButton" Content="BACK" Margin="1in 0.05in" FontSize="20" FontWeight="Black" Style="{DynamicResource ButtonStyle1}"/>
+            <Button x:Name="Add" Style="{DynamicResource ButtonStyle1}" Margin="0.1in 0.08in" Grid.Column="1" HorizontalAlignment="Left"  Visibility="Hidden" ToolTip="Add Product">
+                <Image Source="/Images/logo.png" Stretch="Uniform"/>
+            </Button>
+            <TextBox x:Name="search" Style="{DynamicResource TextBoxStyle1}" Grid.Column="1" MaxWidth="5in"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2" >
+                <Button x:Name="FilerBtn" Style="{DynamicResource ButtonStyle1}" ToolTip="Filter">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/logo.png" Stretch="Uniform"/>
+                            <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem x:Name="FilterByType" Header="По типу">
+                                <MenuItem x:Name="HalfMasksFilter" Header="Полумаски"/>
+                                <MenuItem x:Name="BandagesFilter" Header="Повязки"/>
+                                <MenuItem x:Name="MasksFilter" Header="Маски"/>
+                                <MenuItem x:Name="RespiratorsFilter" Header="Респираторы"/>
+                                <MenuItem x:Name="OnTheFaceFilter" Header="На лицо"/>
+                                <MenuItem x:Name="FullFaceFilter" Header="Полнолицевые"/>
+                                <MenuItem x:Name="ReplacementPartsFilter" Header="Сменные части"/>
+                                <MenuItem x:Name="SparePartsFilter" Header="Запасные части"/>
+                                <MenuItem x:Name="HoldersFilter" Header="Держители"/>
+                                <MenuItem x:Name="PreFiltersFilter" Header="Предфильтры"/>
+                            </MenuItem>
+                            <MenuItem x:Name="ClearFilter" Header="Очистить фильтры" />
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <Button x:Name="SortBtn" Style="{DynamicResource ButtonStyle1}" Margin="0.1in 0.08in" ToolTip="Sort">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/logo.png" Stretch="Uniform"/>
+                            <Path x:Name="BtnArrowSort" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.ContextMenu>
+                        <ContextMenu >
+                            <MenuItem Name="SortByАlphabet" Foreground="Black" Header="По имени а-я" />
+                            <MenuItem Name="ReverseByАlphabet" Foreground="Black" Header="По имени я-а" />
+                            <MenuItem Name="SortByCost" Foreground="Black" Header="По возростанию цены"/>
+                            <MenuItem Name="ReverseByCost" Foreground="Black" Header="По убыванию цены" />
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <Button x:Name="Basket" Style="{DynamicResource ButtonStyle1}" Margin="0.1in 0.08in" >
+                    <Image Source="/Images/logo.png" Stretch="Uniform"/>
+                </Button>
+            </StackPanel>
+        </Grid>
         <ListView 
             Grid.Row="1"
             x:Name="LViewTours"
             ItemsSource="{Binding Service}"
-            Margin="0,32,0,100"
             Visibility="Visible"
             Cursor="Hand"
             Padding="0.1in 0in">
@@ -73,8 +132,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Grid.Row="1" Height="1080" VerticalAlignment="Top">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,968,0,0" >
+        <Grid Grid.Row="2" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" >
                 <TextBlock Name="InStart" Uid="InStart" Text="&lt;&lt;" MouseDown="GoPage_MouseDown" FontSize="20"/>
                 <TextBlock Name="Back" Uid="Back" Text=" &lt;" MouseDown="GoPage_MouseDown" FontSize="20"/>
                 <TextBlock Name="Premier" Uid="1" Text="{Binding  Path = NPage[0]}" Visibility="{Binding Visible[0]}" FontWeight="{Binding Bold[0]}" MouseDown="GoPage_MouseDown" FontSize="20"/>
