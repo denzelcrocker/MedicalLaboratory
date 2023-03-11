@@ -56,6 +56,16 @@
                     </StackPanel>
                 </Button.Content>
             </Button>
+            <Button 
+            Style="{DynamicResource ButtonStyle1}" 
+            Content="История логинов"
+            HorizontalAlignment="Left"
+            Margin="42,941,0,69" 
+            Height="70"
+            Width="350"
+            FontSize="40" 
+            Foreground="White" 
+            FontFamily="Bahnschrift" Click="Button_Click"/>
         </Grid>
     </ScrollViewer>
 </Page>

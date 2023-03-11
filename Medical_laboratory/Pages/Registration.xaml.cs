@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
-using static Medical_laboratory.CurrentList;
 using Medical_laboratory.Entities;
 
 namespace Medical_laboratory.Pages
@@ -40,8 +39,6 @@ namespace Medical_laboratory.Pages
             {
                 string hostName = Dns.GetHostName();
                 IPAddress[] addresses = Dns.GetHostAddresses(hostName);
-
-                int countOfUsers = db.Users.Count();
                 User user = new User();
                 user.Name = name;
                 user.Login = login;

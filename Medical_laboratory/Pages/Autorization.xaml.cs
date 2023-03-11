@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using Microsoft.EntityFrameworkCore;
 using System.Windows.Shapes;
 using Medical_laboratory.Entities;
+using System.Net;
 
 namespace Medical_laboratory.Pages
 {
@@ -62,6 +63,9 @@ namespace Medical_laboratory.Pages
         private void Enter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             ApplicationContext db = new ApplicationContext();
+            History history = new History();
+            string hostName = Dns.GetHostName();
+            IPAddress[] addresses = Dns.GetHostAddresses(hostName);
             bool isEmployee = false;
             bool checkAutorization = false;
             string userLogin = login.Text;
@@ -77,6 +81,12 @@ namespace Medical_laboratory.Pages
                     isEmployee = true;
                     checkAutorization = true;
                     employee = employees[i];
+                    //history.HistoryId = 2;
+                    //history.Login = userLogin;
+                    //history.Date = date;
+                    //history.Ip = Convert.ToString(addresses[1]);
+                    //db.Histories.Add(history);
+                    //db.SaveChanges();
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
             }
@@ -86,7 +96,11 @@ namespace Medical_laboratory.Pages
                 {
                     checkAutorization = true;
                     user = users[i];
-
+                    history.Login = userLogin;
+                    history.Date = DateTime.Now;
+                    history.Ip = Convert.ToString(addresses[1]);
+                    db.Historys.Add(history);
+                    db.SaveChanges();
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
             }

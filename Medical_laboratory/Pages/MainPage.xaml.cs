@@ -43,7 +43,8 @@ namespace Medical_laboratory.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginHistory loginHistory = new LoginHistory();
+            loginHistory.Show();
         }
 
         private void Button_Services_Click(object sender, RoutedEventArgs e)
