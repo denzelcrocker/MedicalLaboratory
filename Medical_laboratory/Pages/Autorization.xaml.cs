@@ -62,7 +62,6 @@ namespace Medical_laboratory.Pages
         }
         private void Enter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ApplicationContext db = new ApplicationContext();
             History history = new History();
             string hostName = Dns.GetHostName();
             IPAddress[] addresses = Dns.GetHostAddresses(hostName);
@@ -81,11 +80,11 @@ namespace Medical_laboratory.Pages
                     isEmployee = true;
                     checkAutorization = true;
                     employee = employees[i];
-                    //history.Login = userLogin;
-                    //history.Date = date;
-                    //history.Ip = Convert.ToString(addresses[1]);
-                    //db.Histories.Add(history);
-                    //db.SaveChanges();
+                    history.Login = userLogin;
+                    history.Date = date;
+                    history.Ip = Convert.ToString(addresses[0]);
+                    db.Histories.Add(history);
+                    db.SaveChanges();
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
             }
@@ -95,11 +94,11 @@ namespace Medical_laboratory.Pages
                 {
                     checkAutorization = true;
                     user = users[i];
-                    //history.Login = userLogin;
-                    //history.Date = DateTime.Now;
-                    //history.Ip = Convert.ToString(addresses[1]);
-                    //db.Histories.Add(history);
-                    //db.SaveChanges();
+                    history.Login = userLogin;
+                    history.Date = DateTime.Now;
+                    history.Ip = Convert.ToString(addresses[1]);
+                    db.Histories.Add(history);
+                    db.SaveChanges();
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
             }

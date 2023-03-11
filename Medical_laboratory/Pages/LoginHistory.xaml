@@ -11,7 +11,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Логин" Binding="{Binding Login}" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Дата и время входа" Binding="{Binding Date}" ></DataGridTextColumn>
-                <DataGridTextColumn Header="Ip пользователя" Binding="{Binding Ip}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Ip пользователя" Binding="{Binding Ip}"></DataGridTextColumn>
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

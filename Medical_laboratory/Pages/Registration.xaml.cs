@@ -30,7 +30,6 @@ namespace Medical_laboratory.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ApplicationContext db = new ApplicationContext();
             string name = nameOfUser.Text;
             string login = loginOfUser.Text;
             string password = passwordOfUser.Text;

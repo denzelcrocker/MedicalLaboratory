@@ -27,11 +27,7 @@ namespace Medical_laboratory.Pages
         public LoginHistory()
         {
             InitializeComponent();
-            ApplicationContext db = new ApplicationContext();
-
-
-
-        histories = db.Histories.ToList();
+            histories = db.Histories.ToList();
             GridHistory.ItemsSource= histories;
         }
     }

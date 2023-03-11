@@ -23,7 +23,6 @@ namespace Medical_laboratory.Pages
     public partial class ViewServices : Page
     {
         Switching switching = new Switching();
-        ApplicationContext db = new ApplicationContext();
         public ViewServices()
         {
             
@@ -74,6 +73,16 @@ namespace Medical_laboratory.Pages
                     break;
             }
             LViewTours.ItemsSource = services.Skip(switching.CurrentPage * switching.CountPage - switching.CountPage).Take(switching.CountPage).ToList();
+        }
+
+        private void Search(object sender, TextChangedEventArgs e)
+        {
+            services = db.Services.ToList();
+            services = services.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
+            switching.CurrentPage = 3;
+            switching.Countlist = services.Count;
+            LViewTours.ItemsSource = services.Skip(0).Take(switching.CountPage).ToList();
+
         }
     }
 }

@@ -24,7 +24,6 @@ namespace Medical_laboratory.Pages
         public MainPage(bool isEmployee)
         {
             InitializeComponent();
-            ApplicationContext db = new ApplicationContext();
             if(isEmployee == true)
             {
                 string roleOfEmployee = db.Roles.ToList().Where(x => x.RoleId == employee.RoleId).FirstOrDefault().NameOfRole;
