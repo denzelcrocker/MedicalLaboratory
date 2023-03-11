@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Medical_laboratory.Entities;
+namespace Medical_laboratory;
 
 public partial class History
 {
@@ -12,7 +12,6 @@ public partial class History
     public DateTime? Date { get; set; }
 
     public string? Ip { get; set; }
+
     public DateTime? Block { get; set; }
-
-
 }

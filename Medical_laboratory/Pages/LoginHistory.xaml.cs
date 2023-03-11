@@ -23,11 +23,15 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class LoginHistory : Window
     {
+        public static List<History> histories = new List<History>();
         public LoginHistory()
         {
-            ApplicationContext db = new ApplicationContext();
             InitializeComponent();
-            histories = db.Histories.ToList();
+            ApplicationContext db = new ApplicationContext();
+
+
+
+        histories = db.Histories.ToList();
             GridHistory.ItemsSource= histories;
         }
     }

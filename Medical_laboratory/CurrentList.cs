@@ -31,7 +31,6 @@ namespace Medical_laboratory
         public static List<Employee> employees = new List<Employee>();
         public static List<Service> services = new List<Service>();
         public static List<User> users = new List<User>();
-        public static List<History> histories = new List<History>();
         public static ApplicationContext db;
     }
 }
