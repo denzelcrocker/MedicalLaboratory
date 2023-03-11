@@ -99,7 +99,7 @@ namespace Medical_laboratory.Pages
                     history.Login = userLogin;
                     history.Date = DateTime.Now;
                     history.Ip = Convert.ToString(addresses[1]);
-                    db.Historys.Add(history);
+                    db.Histories.Add(history);
                     db.SaveChanges();
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
