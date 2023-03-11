@@ -44,13 +44,12 @@ public partial class _43pBaseForMedicalLaboratoryZelentsovContext : DbContext
         {
             entity.ToTable("History");
 
-            entity.Property(e => e.HistoryId).ValueGeneratedNever();
+            entity.Property(e => e.Block).HasColumnType("datetime");
             entity.Property(e => e.Date).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Result>(entity =>
         {
-            entity.Property(e => e.ResultId).ValueGeneratedNever();
             entity.Property(e => e.Date).HasColumnType("date");
             entity.Property(e => e.Result1).HasColumnName("Result");
 
@@ -67,16 +66,9 @@ public partial class _43pBaseForMedicalLaboratoryZelentsovContext : DbContext
                 .HasConstraintName("FK_Results_Users");
         });
 
-        modelBuilder.Entity<Role>(entity =>
-        {
-            entity.Property(e => e.RoleId).ValueGeneratedNever();
-            entity.Property(e => e.NameOfRole).HasColumnName("NameOfRole");
-        });
-
         modelBuilder.Entity<Service>(entity =>
         {
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
-            entity.Property(e => e.NameOfService).HasColumnName("Service");
         });
 
         OnModelCreatingPartial(modelBuilder);

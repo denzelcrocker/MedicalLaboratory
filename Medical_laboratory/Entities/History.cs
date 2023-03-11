@@ -12,7 +12,6 @@ public partial class History
     public DateTime? Date { get; set; }
 
     public string? Ip { get; set; }
+
     public DateTime? Block { get; set; }
-
-
 }
