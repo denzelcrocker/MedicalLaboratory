@@ -82,7 +82,7 @@ namespace Medical_laboratory.Pages
                     employee = employees[i];
                     history.Login = userLogin;
                     history.Date = date;
-                    history.Ip = Convert.ToString(addresses[0]);
+                    history.Ip = Convert.ToString(addresses[1]);
                     db.Histories.Add(history);
                     db.SaveChanges();
                     Manager.frame.Navigate(new MainPage(isEmployee));

@@ -10,11 +10,15 @@
 
   <ItemGroup>
     <None Remove="Images\logo.png" />
+    <None Remove="Pages\add.png" />
+    <None Remove="Pages\addImage.png" />
     <None Remove="Pages\closedEye.png" />
+    <None Remove="Pages\filter.png" />
     <None Remove="Pages\log-out.png" />
     <None Remove="Pages\OpenEye.png" />
     <None Remove="Pages\results.png" />
     <None Remove="Pages\services.png" />
+    <None Remove="Pages\sort.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +44,9 @@
     <Resource Include="Images\openEye.png" />
     <Resource Include="Images\services.png" />
     <Resource Include="Images\results.png" />
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\sort.png" />
+    <Resource Include="Images\filter.png" />
   </ItemGroup>
 
   <ItemGroup>

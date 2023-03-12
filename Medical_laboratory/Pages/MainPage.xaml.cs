@@ -20,11 +20,13 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class MainPage : Page
     {
+        public bool isEmployeeForManager;
 
         public MainPage(bool isEmployee)
         {
             InitializeComponent();
-            if(isEmployee == true)
+            isEmployeeForManager = isEmployee;
+            if (isEmployee == true)
             {
                 string roleOfEmployee = db.Roles.ToList().Where(x => x.RoleId == employee.RoleId).FirstOrDefault().NameOfRole;
                 userInfo.Text = $"{roleOfEmployee}: {employee.Name}";
@@ -48,7 +50,7 @@ namespace Medical_laboratory.Pages
 
         private void Button_Services_Click(object sender, RoutedEventArgs e)
         {
-            Manager.frame.Navigate(new ViewServices());
+            Manager.frame.Navigate(new ViewServices(isEmployeeForManager));
         }
 
         private void Button_Results_Click(object sender, RoutedEventArgs e)
