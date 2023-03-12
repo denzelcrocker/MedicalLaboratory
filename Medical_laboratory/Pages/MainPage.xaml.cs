@@ -30,12 +30,13 @@ namespace Medical_laboratory.Pages
             {
                 string roleOfEmployee = db.Roles.ToList().Where(x => x.RoleId == employee.RoleId).FirstOrDefault().NameOfRole;
                 userInfo.Text = $"{roleOfEmployee}: {employee.Name}";
+                if (db.Roles.ToList().Where(x => x.RoleId == employee.RoleId).FirstOrDefault().NameOfRole == "Администратор")
+                    HistoryButton.Visibility = Visibility.Visible;
             }
             else
             {
                 userInfo.Text = $"Пациент: {user.Name}";
             }
-
         }
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

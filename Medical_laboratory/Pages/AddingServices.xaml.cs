@@ -38,7 +38,6 @@ namespace Medical_laboratory.Pages
                     Manager.frame.Navigate(new ViewServices(isEmployeeForManager));
             }
         }
-
         private void Click_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Manager.frame.Navigate(new ViewServices(isEmployeeForManager));

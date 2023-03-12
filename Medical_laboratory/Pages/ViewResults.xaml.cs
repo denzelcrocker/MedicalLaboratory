@@ -20,7 +20,7 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class ViewResults : Page
     {
-        public List<Service> currentServices;
+        public List<Result> currentResults;
         public IEnumerable<Service> currentList = services;
         Switching switching = new Switching();
         public bool isEmployeeForManager;
@@ -32,6 +32,7 @@ namespace Medical_laboratory.Pages
                 if (db.Roles.ToList().Where(x => x.RoleId == employee.RoleId).FirstOrDefault().NameOfRole == "Администратор")
                     Add.Visibility = Visibility.Visible;
             }
+
             isEmployeeForManager = isEmployee;
             DataContext = switching;
             int countOfResults = db.Results.Count();
@@ -39,7 +40,7 @@ namespace Medical_laboratory.Pages
             switching.CountPage = 8;
             switching.Countlist = countOfResults;
             LViewTours.ItemsSource = results.Skip(0).Take(switching.CountPage).ToList();
-            currentServices = services;
+            currentResults = results;
 
         }
 
@@ -60,7 +61,7 @@ namespace Medical_laboratory.Pages
                     break;
                 case "InEnd":
                     {
-                        int countOfServices = currentServices.Count();
+                        int countOfServices = currentResults.Count();
                         int a = countOfServices;
                         int b = Convert.ToInt32(3);
 
@@ -79,14 +80,14 @@ namespace Medical_laboratory.Pages
                     switching.CurrentPage = Convert.ToInt32(tb.Text);
                     break;
             }
-            LViewTours.ItemsSource = currentServices.Skip(switching.CurrentPage * switching.CountPage - switching.CountPage).Take(switching.CountPage).ToList();
+            LViewTours.ItemsSource = currentResults.Skip(switching.CurrentPage * switching.CountPage - switching.CountPage).Take(switching.CountPage).ToList();
         }
 
         private void Search(object sender, TextChangedEventArgs e)
         {
             if (search.Text != "" && LViewTours != null)
             {
-                var searchName = currentServices.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
+                var searchName = currentResults.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
                 switching.CurrentPage = 3;
                 switching.Countlist = searchName.Count;
                 LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
@@ -117,7 +118,7 @@ namespace Medical_laboratory.Pages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Manager.frame.Navigate(new AddingServices(isEmployeeForManager));
+            Manager.frame.Navigate(new AddingResults(isEmployeeForManager));
         }
 
         private void FilterButton_Click(object sender, RoutedEventArgs e)

@@ -57,13 +57,15 @@
                 </Button.Content>
             </Button>
             <Button 
+            x:Name="HistoryButton"
             Style="{DynamicResource ButtonStyle1}" 
             Content="История логинов"
             HorizontalAlignment="Left"
-            Margin="42,929,0,81" 
+            Margin="42,921,0,89" 
             Height="70"
             Width="350"
             FontSize="40" 
+            Visibility="Hidden"
             Foreground="White" 
             FontFamily="Bahnschrift" Click="Button_Click"/>
         </Grid>
