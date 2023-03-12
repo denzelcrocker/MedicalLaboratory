@@ -15,6 +15,7 @@ namespace Medical_laboratory
         public static History history;
         public static List<Employee> employees = new List<Employee>();
         public static List<Service> services = new List<Service>();
+        public static List<Result> results = new List<Result>();
         public static List<User> users = new List<User>();
         public static _43pBaseForMedicalLaboratoryZelentsovContext db = new _43pBaseForMedicalLaboratoryZelentsovContext();
     }

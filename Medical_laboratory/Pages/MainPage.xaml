@@ -60,7 +60,7 @@
             Style="{DynamicResource ButtonStyle1}" 
             Content="История логинов"
             HorizontalAlignment="Left"
-            Margin="42,941,0,69" 
+            Margin="42,929,0,81" 
             Height="70"
             Width="350"
             FontSize="40" 

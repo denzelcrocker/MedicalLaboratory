@@ -55,7 +55,7 @@ namespace Medical_laboratory.Pages
 
         private void Button_Results_Click(object sender, RoutedEventArgs e)
         {
-            Manager.frame.Navigate(new ViewRezults());
+            Manager.frame.Navigate(new ViewResults(isEmployeeForManager));
         }
     }
 }

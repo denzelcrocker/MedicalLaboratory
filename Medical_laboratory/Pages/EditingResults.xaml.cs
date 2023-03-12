@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Medical_laboratory.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewRezults.xaml
+    /// Логика взаимодействия для EditingResults.xaml
     /// </summary>
-    public partial class ViewRezults : Page
+    public partial class EditingResults : Page
     {
-        public ViewRezults()
+        public EditingResults()
         {
             InitializeComponent();
         }
