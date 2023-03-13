@@ -5,10 +5,147 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Medical_laboratory.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="EditingResults">
 
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <ComboBox x:Name="ServiceComboBox" HorizontalAlignment="Center" Margin="0,389,0,0"  FontSize="35" VerticalAlignment="Top" Width="350" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <TextBox 
+            Style="{DynamicResource TextBoxStyle1}" 
+            x:Name="ResultTextBox" 
+            TextWrapping="Wrap" 
+            Height="70"
+            Width="350" 
+            FontSize="30" 
+            TextAlignment="Left"
+            Margin="785,534,785,476"/>
+            <TextBlock 
+            Text="Результат анализа"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontSize="30"
+            Width="386"
+            HorizontalAlignment="Center"
+            Foreground="#003d34" 
+            FontWeight="Normal" 
+            FontStyle="Normal" 
+            FontFamily="Bahnschrift"
+            Margin="0,481,0,551"/>
+            <TextBlock 
+            Text="Дата приема"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontSize="30"
+            Width="386"
+            HorizontalAlignment="Center"
+            Foreground="#003d34" 
+            FontWeight="Normal" 
+            FontStyle="Normal" 
+            FontFamily="Bahnschrift" Margin="0,609,0,423"/>
+            <Button 
+            Style="{DynamicResource ButtonStyle1}" 
+            Content="Редактировать"
+            HorizontalAlignment="Center"
+            Margin="0,768,0,242" 
+            Height="70"
+            Width="350"
+            FontSize="40" 
+            Foreground="White" 
+            FontFamily="Bahnschrift" Click="EditButton_Click"/>
+            <Button 
+            Style="{DynamicResource ButtonStyle1}" 
+            Content="Удалить"
+            HorizontalAlignment="Center"
+            Margin="0,876,0,134" 
+            Height="70"
+            Width="350"
+            FontSize="40" 
+            Foreground="White" 
+            FontFamily="Bahnschrift" Click="DeleteButton_Click"/>
+            <TextBlock x:Name="Click"
+                   Text="Назад" 
+                   TextDecorations="Underline" 
+                   TextAlignment="Center"
+                   TextWrapping="WrapWithOverflow"
+                   HorizontalAlignment="Left"
+                   Width="150"
+                   FontWeight="Bold" 
+                   Foreground="#003d34"
+                   FontSize="40" 
+                   Margin="10,10,0,1001" 
+                   FontFamily="Bahnschrift" 
+                   Cursor="Hand"
+                   MouseLeftButtonDown="Click_MouseLeftButtonDown"/>
+            <TextBlock 
+                Text="Лаборант"
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                FontSize="30"
+                Width="386"
+                HorizontalAlignment="Center"
+                Foreground="#003d34" 
+                FontWeight="Normal" 
+                FontStyle="Normal" 
+                FontFamily="Bahnschrift"
+                Margin="0,218,0,814"/>
+            <DatePicker 
+                Name="DateAdd" 
+                HorizontalAlignment="Center" 
+                FontSize="35"
+                Margin="0,657,0,0" 
+                VerticalAlignment="Top"
+                Height="61" 
+                Width="350"
+                FontFamily="Bahnschrift"
+                BorderBrush="{x:Null}"/>
+            <TextBlock 
+                Text="Услуга"
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                FontSize="30"
+                Width="386"
+                HorizontalAlignment="Center"
+                Foreground="#003d34" 
+                FontWeight="Normal" 
+                FontStyle="Normal" 
+                FontFamily="Bahnschrift"
+                Margin="0,341,0,691"/>
+            <ComboBox x:Name="EmployeeComboBox" HorizontalAlignment="Center" Margin="0,266,0,0"  FontSize="35" VerticalAlignment="Top" Width="350" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <ComboBox x:Name="UserComboBox" HorizontalAlignment="Center" Margin="0,142,0,0"  FontSize="35" VerticalAlignment="Top" Width="350" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <TextBlock 
+                Text="Пациент"
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                FontSize="30"
+                Width="386"
+                HorizontalAlignment="Center"
+                Foreground="#003d34" 
+                FontWeight="Normal" 
+                FontStyle="Normal" 
+                FontFamily="Bahnschrift"
+                Margin="0,94,0,938"/>
+        </Grid>
+    </ScrollViewer>
 </Page>

@@ -13,6 +13,7 @@
     <None Remove="Pages\add.png" />
     <None Remove="Pages\addImage.png" />
     <None Remove="Pages\closedEye.png" />
+    <None Remove="Pages\exit.png" />
     <None Remove="Pages\filter.png" />
     <None Remove="Pages\log-out.png" />
     <None Remove="Pages\OpenEye.png" />
@@ -47,6 +48,7 @@
     <Resource Include="Images\add.png" />
     <Resource Include="Images\sort.png" />
     <Resource Include="Images\filter.png" />
+    <Resource Include="Images\exit.png" />
   </ItemGroup>
 
   <ItemGroup>

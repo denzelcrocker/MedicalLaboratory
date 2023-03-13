@@ -25,7 +25,7 @@
             Margin="1780,24,0,0"
             VerticalAlignment="Top"
             Width="100"
-            Source="/Images/log-out.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+            Source="/Images/exit.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
             <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="244,252,1095,252" Click="Button_Services_Click">
                 <Button.Content>
                     <StackPanel>

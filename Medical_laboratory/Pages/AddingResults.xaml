@@ -92,7 +92,7 @@
                 FontSize="35"
                 Margin="0,690,0,0" 
                 VerticalAlignment="Top"
-                Height="70" 
+                Height="61" 
                 Width="350"
                 FontFamily="Bahnschrift"
                 BorderBrush="{x:Null}"/>
