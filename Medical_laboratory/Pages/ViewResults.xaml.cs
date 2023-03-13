@@ -26,6 +26,36 @@ namespace Medical_laboratory.Pages
         public bool isEmployeeForManager;
         public ViewResults(bool isEmployee)
         {
+            //InitializeComponent();
+            //if (isEmployee == true)
+            //{
+            //    currentResults = results;
+            //    Add.Visibility = Visibility.Visible;
+            //    isEmployeeForManager = isEmployee;
+            //    DataContext = switching;
+            //    int countOfResults = db.Results.Count();
+            //    results = db.Results.ToList();
+            //    switching.CountPage = 8;
+            //    switching.Countlist = countOfResults;
+            //    LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
+            //}
+            //else
+            //{
+            //    string bdfb = nameOfUserForOutput;
+            //    //int id = db.Users.ToList().Where(x => x.Name == nameOfUserForOutput).FirstOrDefault().UserId;
+            //    currentResults = results;
+            //    for (int i = 0; i < currentResults.Count; i++)
+            //    {
+            //        if (currentResults[i].UserId != db.Users.ToList().Where(x => x.Name == nameOfUserForOutput).FirstOrDefault().UserId)
+            //        {
+            //            currentResults.RemoveAt(i);
+            //            i--;
+            //        }
+            //    }
+            //    switching.CurrentPage = 3;
+            //    switching.Countlist = currentResults.Count;
+            //    LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
+            //}
             InitializeComponent();
             if (isEmployee == true)
             {
