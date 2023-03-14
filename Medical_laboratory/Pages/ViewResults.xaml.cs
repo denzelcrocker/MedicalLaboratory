@@ -26,50 +26,54 @@ namespace Medical_laboratory.Pages
         public bool isEmployeeForManager;
         public ViewResults(bool isEmployee)
         {
-            //InitializeComponent();
-            //if (isEmployee == true)
-            //{
-            //    currentResults = results;
-            //    Add.Visibility = Visibility.Visible;
-            //    isEmployeeForManager = isEmployee;
-            //    DataContext = switching;
-            //    int countOfResults = db.Results.Count();
-            //    results = db.Results.ToList();
-            //    switching.CountPage = 8;
-            //    switching.Countlist = countOfResults;
-            //    LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
-            //}
-            //else
-            //{
-            //    string bdfb = nameOfUserForOutput;
-            //    //int id = db.Users.ToList().Where(x => x.Name == nameOfUserForOutput).FirstOrDefault().UserId;
-            //    currentResults = results;
-            //    for (int i = 0; i < currentResults.Count; i++)
-            //    {
-            //        if (currentResults[i].UserId != db.Users.ToList().Where(x => x.Name == nameOfUserForOutput).FirstOrDefault().UserId)
-            //        {
-            //            currentResults.RemoveAt(i);
-            //            i--;
-            //        }
-            //    }
-            //    switching.CurrentPage = 3;
-            //    switching.Countlist = currentResults.Count;
-            //    LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
-            //}
             InitializeComponent();
             if (isEmployee == true)
             {
                 Add.Visibility = Visibility.Visible;
+                isEmployeeForManager = isEmployee;
+                DataContext = switching;
+                int countOfResults = db.Results.Count();
+                results = db.Results.ToList();
+                currentResults = results;
+                switching.CountPage = 8;
+                switching.Countlist = countOfResults;
+                LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
+                currentResults = results;
+            }
+            else
+            {
+                isEmployeeForManager = isEmployee;
+                DataContext = switching;
+                currentResults = db.Results.ToList();
+                for (int i = 0; i < currentResults.Count; i++)
+                {
+                    if (currentResults[i].UserId != db.Users.ToList().Where(x => x.Name == user.Name).FirstOrDefault().UserId)
+                    {
+                        currentResults.RemoveAt(i);
+                        i--;
+                    }
+                }
+                int countOfResults = currentResults.Count();
+                switching.CountPage = 8;
+                switching.Countlist = countOfResults;
+                LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
             }
 
-            isEmployeeForManager = isEmployee;
-            DataContext = switching;
-            int countOfResults = db.Results.Count();
-            results = db.Results.ToList();
-            switching.CountPage = 8;
-            switching.Countlist = countOfResults;
-            LViewTours.ItemsSource = results.Skip(0).Take(switching.CountPage).ToList();
-            currentResults = results;
+
+            //InitializeComponent();
+            //if (isEmployee == true)
+            //{
+            //    Add.Visibility = Visibility.Visible;
+            //}
+
+            //isEmployeeForManager = isEmployee;
+            //DataContext = switching;
+            //int countOfResults = db.Results.Count();
+            //results = db.Results.ToList();
+            //switching.CountPage = 8;
+            //switching.Countlist = countOfResults;
+            //LViewTours.ItemsSource = results.Skip(0).Take(switching.CountPage).ToList();
+            //currentResults = results;
 
         }
 
@@ -114,20 +118,35 @@ namespace Medical_laboratory.Pages
 
         private void Search(object sender, TextChangedEventArgs e)
         {
-            //if (search.Text != "" && LViewTours != null)
-            //{
-            //    var searchName = currentResults.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
-            //    switching.CurrentPage = 3;
-            //    switching.Countlist = searchName.Count;
-            //    LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
-            //}
-            //else if (LViewTours != null)
-            //{
-            //    var current = currentServices.ToList();
-            //    switching.CurrentPage = 3;
-            //    switching.Countlist = current.Count;
-            //    LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
-            //}
+            if (search.Text != "" && LViewTours != null)
+            {
+                var searchName = currentResults.Where(p => p.Service.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
+                switching.CurrentPage = 3;
+                switching.Countlist = searchName.Count;
+                LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+            }
+            else if (LViewTours != null)
+            {
+                var current = currentResults.ToList();
+                switching.CurrentPage = 3;
+                switching.Countlist = current.Count;
+                LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+            }
+
+            if (search.Text != "" && LViewTours != null)
+            {
+                var searchName = currentResults.Where(p => p.User.Name.ToLower().Contains(search.Text.ToLower())).ToList();
+                switching.CurrentPage = 3;
+                switching.Countlist = searchName.Count;
+                LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+            }
+            else if (LViewTours != null)
+            {
+                var current = currentResults.ToList();
+                switching.CurrentPage = 3;
+                switching.Countlist = current.Count;
+                LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+            }
 
         }
         private void BackClick(object sender, RoutedEventArgs e)

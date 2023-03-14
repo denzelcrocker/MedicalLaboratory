@@ -114,6 +114,12 @@
                                 FontSize="20"
                                 VerticalAlignment="Center"/>
                             <TextBlock 
+                                Grid.Column="2"
+                                Text="{Binding Service.NameOfService}"
+                                FontFamily="Bahnschrift"
+                                FontSize="20"
+                                VerticalAlignment="Center"/>
+                            <TextBlock 
                                 Grid.Column="3"
                                 Text="{Binding Date}"
                                 FontFamily="Bahnschrift"
@@ -122,12 +128,6 @@
                                 VerticalAlignment="Bottom"
                                 Margin="10"/>
                             <TextBlock 
-                                Grid.Column="2"
-                                Text="{Binding Service.NameOfService}"
-                                FontFamily="Bahnschrift"
-                                FontSize="20"
-                                VerticalAlignment="Center"/>
-                            <TextBlock 
                                 Grid.Column="3"
                                 Text="{Binding Result1, StringFormat={}{0:N2} результат }"
                                 FontFamily="Bahnschrift"
@@ -135,7 +135,6 @@
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
                                 Margin="10"/>
-                            
                         </Grid>
                     </Border>
                 </DataTemplate>
