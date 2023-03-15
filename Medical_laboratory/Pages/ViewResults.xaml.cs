@@ -20,8 +20,9 @@ namespace Medical_laboratory.Pages
     /// </summary>
     public partial class ViewResults : Page
     {
+        public int typeOfSearch;
         public List<Result> currentResults;
-        public IEnumerable<Service> currentList = services;
+        public IEnumerable<Result> currentList = results;
         Switching switching = new Switching();
         public bool isEmployeeForManager;
         public ViewResults(bool isEmployee)
@@ -58,23 +59,6 @@ namespace Medical_laboratory.Pages
                 switching.Countlist = countOfResults;
                 LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
             }
-
-
-            //InitializeComponent();
-            //if (isEmployee == true)
-            //{
-            //    Add.Visibility = Visibility.Visible;
-            //}
-
-            //isEmployeeForManager = isEmployee;
-            //DataContext = switching;
-            //int countOfResults = db.Results.Count();
-            //results = db.Results.ToList();
-            //switching.CountPage = 8;
-            //switching.Countlist = countOfResults;
-            //LViewTours.ItemsSource = results.Skip(0).Take(switching.CountPage).ToList();
-            //currentResults = results;
-
         }
 
         private void GoPage_MouseDown(object sender, MouseButtonEventArgs e)
@@ -118,34 +102,88 @@ namespace Medical_laboratory.Pages
 
         private void Search(object sender, TextChangedEventArgs e)
         {
-            if (search.Text != "" && LViewTours != null)
+            switch(typeOfSearch)
             {
-                var searchName = currentResults.Where(p => p.Service.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
-                switching.CurrentPage = 3;
-                switching.Countlist = searchName.Count;
-                LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
-            }
-            else if (LViewTours != null)
-            {
-                var current = currentResults.ToList();
-                switching.CurrentPage = 3;
-                switching.Countlist = current.Count;
-                LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
-            }
-
-            if (search.Text != "" && LViewTours != null)
-            {
-                var searchName = currentResults.Where(p => p.User.Name.ToLower().Contains(search.Text.ToLower())).ToList();
-                switching.CurrentPage = 3;
-                switching.Countlist = searchName.Count;
-                LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
-            }
-            else if (LViewTours != null)
-            {
-                var current = currentResults.ToList();
-                switching.CurrentPage = 3;
-                switching.Countlist = current.Count;
-                LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+                case 1:
+                    if (search.Text != "" && LViewTours != null)
+                    {
+                        var searchName = currentResults.Where(p => p.Employee.Name.ToLower().Contains(search.Text.ToLower())).ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = searchName.Count;
+                        LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    else if (LViewTours != null)
+                    {
+                        var current = currentResults.ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = current.Count;
+                        LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    break;
+                case 2:
+                    if (search.Text != "" && LViewTours != null)
+                    {
+                        var searchName = currentResults.Where(p => p.User.Name.ToLower().Contains(search.Text.ToLower())).ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = searchName.Count;
+                        LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    else if (LViewTours != null)
+                    {
+                        var current = currentResults.ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = current.Count;
+                        LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    break;
+                case 3:
+                    if (search.Text != "" && LViewTours != null)
+                    {
+                        var searchName = currentResults.Where(p => p.Service.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = searchName.Count;
+                        LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    else if (LViewTours != null)
+                    {
+                        var current = currentResults.ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = current.Count;
+                        LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    break;
+                case 4:
+                    if (search.Text != "" && LViewTours != null)
+                    {
+                        var searchName = currentResults.Where(p => p.Result1.ToLower().Contains(search.Text.ToLower())).ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = searchName.Count;
+                        LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    else if (LViewTours != null)
+                    {
+                        var current = currentResults.ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = current.Count;
+                        LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    break;
+                default:
+                    if (search.Text != "" && LViewTours != null)
+                    {
+                        var searchName = currentResults.Where(p => p.Service.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = searchName.Count;
+                        LViewTours.ItemsSource = searchName.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    else if (LViewTours != null)
+                    {
+                        var current = currentResults.ToList();
+                        switching.CurrentPage = 3;
+                        switching.Countlist = current.Count;
+                        LViewTours.ItemsSource = current.Skip(0).Take(switching.CountPage).ToList();
+                    }
+                    break;
             }
 
         }
@@ -177,82 +215,38 @@ namespace Medical_laboratory.Pages
         }
         private void PremierFilter_Click(object sender, RoutedEventArgs e)
         {
-            //currentServices = currentServices.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
-            //for (int i = 0; i < currentServices.Count; i++)
-            //{
-            //    if (currentServices[i].Price >= 300)
-            //    {
-            //        currentServices.RemoveAt(i);
-            //        i--;
-            //    }
-            //}
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentServices.Skip(0).Take(switching.CountPage).ToList();
+            typeOfSearch = 1;
         }
 
         private void SecondFilter_Click(object sender, RoutedEventArgs e)
         {
-            //currentServices = currentServices.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
-            //for (int i = 0; i < currentServices.Count; i++)
-            //{
-            //    if (currentServices[i].Price < 300 || currentServices[i].Price >= 700)
-            //    {
-            //        currentServices.RemoveAt(i);
-            //        i--;
-            //    }
-            //}
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentServices.Skip(0).Take(switching.CountPage).ToList();
+            typeOfSearch = 2;
         }
 
         private void ThirdFilter_Click(object sender, RoutedEventArgs e)
         {
-            //currentServices = currentServices.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
-            //for (int i = 0; i < currentServices.Count; i++)
-            //{
-            //    if (currentServices[i].Price < 700 || currentServices[i].Price >= 1000)
-            //    {
-            //        currentServices.RemoveAt(i);
-            //        i--;
-            //    }
-            //}
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentServices.Skip(0).Take(switching.CountPage).ToList();
+            typeOfSearch = 3;
         }
 
         private void FourthFilter_Click(object sender, RoutedEventArgs e)
         {
-            //currentServices = currentServices.Where(p => p.NameOfService.ToLower().Contains(search.Text.ToLower())).ToList();
-            //for (int i = 0; i < currentServices.Count; i++)
-            //{
-            //    if (currentServices[i].Price < 1000)
-            //    {
-            //        currentServices.RemoveAt(i);
-            //        i--;
-            //    }
-            //}
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentServices.Skip(0).Take(switching.CountPage).ToList();
+            typeOfSearch = 4;
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            //currentServices = db.Services.ToList();
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentServices.Skip(0).Take(switching.CountPage).ToList();
+            currentResults = db.Results.ToList();
+            switching.CurrentPage = 3;
+            switching.Countlist = currentResults.Count;
+            LViewTours.ItemsSource = currentResults.Skip(0).Take(switching.CountPage).ToList();
         }
 
         private void SortByАlphabet_Click(object sender, RoutedEventArgs e)
         {
-            //currentList = currentServices.OrderBy(x => x.NameOfService);
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
+            currentList = currentResults.OrderBy(x => x.Service.NameOfService);
+            switching.CurrentPage = 3;
+            switching.Countlist = currentResults.Count;
+            LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
         }
 
         private void SortButton_Button(object sender, RoutedEventArgs e)
@@ -265,25 +259,10 @@ namespace Medical_laboratory.Pages
 
         private void ReverseByAlphabet_Click(object sender, RoutedEventArgs e)
         {
-            //currentList = currentServices.OrderByDescending(x => x.NameOfService);
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
-        }
-
-        private void SortByPrice_Click(object sender, RoutedEventArgs e)
-        {
-            //currentList = currentServices.OrderBy(x => x.Price);
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
-        }
-        private void ReverseByPrice_Click(object sender, RoutedEventArgs e)
-        {
-            //currentList = currentServices.OrderByDescending(x => x.Price);
-            //switching.CurrentPage = 3;
-            //switching.Countlist = currentServices.Count;
-            //LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
+            currentList = currentResults.OrderByDescending(x => x.Service.NameOfService);
+            switching.CurrentPage = 3;
+            switching.Countlist = currentResults.Count;
+            LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
         }
     }
 }

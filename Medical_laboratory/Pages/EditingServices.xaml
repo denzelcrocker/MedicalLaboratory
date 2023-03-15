@@ -54,7 +54,7 @@
             FontFamily="Bahnschrift" Margin="0,452,0,580"/>
                 <Button 
             Style="{DynamicResource ButtonStyle1}" 
-            Content="Редактировать"
+            Content="Сохранить"
             HorizontalAlignment="Center"
             Margin="0,621,0,389" 
             Height="70"
