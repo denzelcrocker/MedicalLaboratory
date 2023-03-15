@@ -27,7 +27,8 @@
 ![image](https://user-images.githubusercontent.com/100830195/222417181-5b50fed7-3310-4cd1-9d31-a41cc8cdfc17.png)
 
 # День 2
-Первым делом было разработано  окно регистрации:
+Первым делом было разработано окно регистрации и окно входа:
+![image](https://user-images.githubusercontent.com/100990884/225435041-ef9116a0-8d24-48b4-85c0-5d30744c6c33.png)
 ![image](https://user-images.githubusercontent.com/100990884/225432482-5d3c98f8-5d98-4cf5-b793-ab9e5ef8ff5e.png)
 В строке пароля добавлена кнопка настройки видимости текста для удобства пользователей:
 ![image](https://user-images.githubusercontent.com/100990884/225432817-56b4da99-3221-43dd-8044-a816a0e806b5.png)
