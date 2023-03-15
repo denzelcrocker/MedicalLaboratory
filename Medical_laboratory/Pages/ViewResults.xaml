@@ -29,7 +29,7 @@
                 <Button x:Name="FilerBtn" Style="{DynamicResource ButtonStyle1}" ToolTip="Filter" Width="90" Height="90" Click="FilterButton_Click">
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Images/filter.png" Stretch="Uniform" Height="60" Margin="10,10,0,0"/>
+                            <Image Source="/Images/loupe.png" Stretch="Uniform" Height="60" Margin="10,0,0,0"/>
                             <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
                         </StackPanel>
                     </Button.Content>
