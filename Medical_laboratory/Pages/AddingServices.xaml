@@ -15,20 +15,18 @@
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="serviceTextBox" 
             TextWrapping="Wrap" 
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="30" 
             TextAlignment="Left"
-            Margin="785,377,785,633"/>
+            Margin="686,377,686,633"/>
                 <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="priceTextBox" 
             TextWrapping="Wrap" 
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="30" 
             TextAlignment="Left"
-            Margin="785,505,785,505"/>
+            Margin="686,505,686,505"/>
                 <TextBlock 
             Text="Услуга"
             TextWrapping="Wrap"

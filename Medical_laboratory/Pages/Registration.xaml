@@ -13,38 +13,34 @@
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="nameOfUser" 
             TextWrapping="Wrap" 
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="40" 
             TextAlignment="Left"
-            Margin="785,233,785,777"/>
+            Margin="540,232,541,778"/>
             <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="loginOfUser" 
             TextWrapping="Wrap" 
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="40" 
             TextAlignment="Left"
-            Margin="785,378,785,632"/>
+            Margin="540,377,541,633"/>
             <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="passwordOfUser" 
             TextWrapping="Wrap"
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="40" 
             TextAlignment="Left"
-            Margin="785,520,785,490"/>
+            Margin="540,519,541,491"/>
             <TextBox 
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="passwordRepeatOfUser" 
             TextWrapping="Wrap"
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="40" 
             TextAlignment="Left"
-            Margin="785,663,785,347"/>
+            Margin="540,662,541,348"/>
             <TextBlock 
             Text="Инициалы"
             TextWrapping="Wrap"

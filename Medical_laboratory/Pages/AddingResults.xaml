@@ -10,7 +10,7 @@
 
     <ScrollViewer HorizontalScrollBarVisibility="Auto">
         <Grid>
-            <ComboBox x:Name="ServiceComboBox" HorizontalAlignment="Center" Margin="0,422,0,0"  FontSize="35" VerticalAlignment="Top" Width="350" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
+            <ComboBox x:Name="ServiceComboBox" HorizontalAlignment="Left" Margin="522,420,0,0"  FontSize="35" VerticalAlignment="Top" Width="866" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
                 <ComboBox.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="#FFF0F0F0"/>
@@ -22,11 +22,10 @@
             Style="{DynamicResource TextBoxStyle1}" 
             x:Name="ResultTextBox" 
             TextWrapping="Wrap" 
-            Height="70"
-            Width="350" 
+            Height="70" 
             FontSize="30" 
             TextAlignment="Left"
-            Margin="785,567,785,443"/>
+            Margin="522,555,515,455"/>
             <TextBlock 
             Text="Результат анализа"
             TextWrapping="Wrap"
@@ -88,12 +87,12 @@
                 Margin="0,251,0,781"/>
             <DatePicker 
                 Name="DateAdd" 
-                HorizontalAlignment="Center" 
+                HorizontalAlignment="Left" 
                 FontSize="35"
-                Margin="0,690,0,0" 
+                Margin="522,688,0,0" 
                 VerticalAlignment="Top"
                 Height="61" 
-                Width="350"
+                Width="866"
                 FontFamily="Bahnschrift"
                 BorderBrush="{x:Null}"/>
             <TextBlock 
@@ -108,7 +107,7 @@
                 FontStyle="Normal" 
                 FontFamily="Bahnschrift"
                 Margin="0,374,0,658"/>
-            <ComboBox x:Name="EmployeeComboBox" HorizontalAlignment="Center" Margin="0,299,0,0"  FontSize="35" VerticalAlignment="Top" Width="350" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
+            <ComboBox x:Name="EmployeeComboBox" HorizontalAlignment="Left" Margin="522,297,0,0"  FontSize="35" VerticalAlignment="Top" Width="866" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
                 <ComboBox.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="#FFF0F0F0"/>
@@ -116,7 +115,7 @@
                     </LinearGradientBrush>
                 </ComboBox.Background>
             </ComboBox>
-            <ComboBox x:Name="UserComboBox" HorizontalAlignment="Center" Margin="0,175,0,0"  FontSize="35" VerticalAlignment="Top" Width="350" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
+            <ComboBox x:Name="UserComboBox" HorizontalAlignment="Left" Margin="522,173,0,0"  FontSize="35" VerticalAlignment="Top" Width="866" Height="70" FontFamily="Bahnschrift" BorderThickness="2,2,2,2">
                 <ComboBox.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="#FFF0F0F0"/>
