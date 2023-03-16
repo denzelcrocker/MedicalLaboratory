@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Windows.Shapes;
 using Medical_laboratory.Entities;
 using System.Net;
+using System.Diagnostics;
 
 namespace Medical_laboratory.Pages
 {
@@ -32,6 +33,7 @@ namespace Medical_laboratory.Pages
             closedEye.Visibility = Visibility.Hidden;
             date = DateTime.Now;
         }
+
         private void login_TextChanged(object sender, TextChangedEventArgs e)
         {
 

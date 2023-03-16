@@ -7,9 +7,17 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Autorization">
-
-    <ScrollViewer HorizontalScrollBarVisibility="Auto">
-        <Grid Width="1920" Height="1080">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="1"
+            Grid.Column="1">
             <Label Content="Логин" 
                FontSize="40"
                Height="60"
@@ -18,38 +26,59 @@
                Foreground="#003d34" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift" Margin="0,366,0,654"/>
+               FontFamily="Bahnschrift"/>
             <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  x:Name="login" 
                  TextWrapping="Wrap" 
                  TextChanged="login_TextChanged" 
                  Height="60"
-                 Width="520" 
-                 Margin="700,423,700,597" 
+                 Width="520"
                  FontSize="40" 
                  TextAlignment="Left"/>
             <Label Content="Пароль" 
                FontSize="40"
                Height="60"
                HorizontalAlignment="Center"
-               Width="150" 
-               Margin="0,483,0,537"
+               Width="150"
                Foreground="#003d34" 
                FontFamily="Bahnschrift"/>
-            <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" 
+            <Grid
+                Margin="60,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" 
                      x:Name="password" 
-                     HorizontalAlignment="Center" 
+                     Grid.ColumnSpan="2"
+                     Width="520"
                      Height="60"
-                     Width="520" 
-                     Margin="0,543,0,477" 
+                     HorizontalAlignment="Stretch"
                      FontSize="35" />
-            <TextBox Style="{DynamicResource TextBoxStyle1}" 
+                <TextBox Style="{DynamicResource TextBoxStyle1}" 
                      x:Name="password1" 
-                     HorizontalAlignment="Center" 
+                     Grid.ColumnSpan="2"
+                     Width="520"
                      Height="60"
-                     Width="520" 
-                     Margin="0,543,0,477" 
+                     HorizontalAlignment="Stretch" 
                      FontSize="35"/>
+                <Image 
+                     Grid.Column="1"
+                     Margin="15,0"
+                     x:Name="closedEye"
+                     Height="34"
+                     Width="33"
+                     Source="/Images/closedEye.png"
+                     MouseLeftButtonDown="closedEye_MouseLeftButtonDown"/>
+                <Image
+                     Margin="15,0"
+                     Grid.Column="1"
+                     x:Name="openEye"
+                     Height="32"
+                     Width="34"
+                     Source="/Images/openEye.png"
+                     MouseLeftButtonDown="openEye_MouseLeftButtonDown"/>
+            </Grid>
             <TextBlock x:Name="Click"
                    Text="Вход" 
                    TextDecorations="Underline" 
@@ -59,7 +88,7 @@
                    Width="150"
                    FontWeight="Bold" 
                    Foreground="#003d34"
-                   FontSize="50" Margin="0,652,0,359" 
+                   FontSize="50"
                    FontFamily="Bahnschrift" 
                    Cursor="Hand" MouseLeftButtonDown="Enter_MouseLeftButtonDown"/>
             <TextBlock x:Name="RegistrationClick"
@@ -71,28 +100,11 @@
                    Width="298"
                    FontWeight="Bold" 
                    Foreground="#003d34"
-                   FontSize="30" Margin="0,914,0,122" 
+                   FontSize="30"
                    FontFamily="Bahnschrift" 
+                   Margin="0,64,0,0"
                    Cursor="Hand" 
                    MouseLeftButtonDown="Reg_MouseLeftButtonDown"/>
-            <Image 
-            x:Name="closedEye"
-            Height="34"
-            Width="33"
-            Source="/Images/closedEye.png"
-            Margin="1164,557,0,0"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Left"
-            MouseLeftButtonDown="closedEye_MouseLeftButtonDown"/>
-            <Image
-            x:Name="openEye"
-            Height="32"
-            Width="34"
-            Source="/Images/openEye.png"
-            Margin="1164,557,0,0"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Left"
-            MouseLeftButtonDown="openEye_MouseLeftButtonDown"/>
-        </Grid>
-    </ScrollViewer>
+        </StackPanel>
+    </Grid>
 </Page>

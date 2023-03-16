@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Medical_laboratory.Pages
 {
     /// <summary>
@@ -34,7 +35,7 @@ namespace Medical_laboratory.Pages
                 isEmployeeForManager = isEmployee;
                 DataContext = switching;
                 int countOfResults = db.Results.Count();
-                results = db.Results.ToList();
+                results = db.Results.Include(r => r.Service).ToList();
                 currentResults = results;
                 switching.CountPage = 8;
                 switching.Countlist = countOfResults;

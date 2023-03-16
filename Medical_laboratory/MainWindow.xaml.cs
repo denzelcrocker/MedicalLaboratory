@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Diagnostics;
 
 namespace Medical_laboratory
 {
@@ -31,13 +32,14 @@ namespace Medical_laboratory
             Manager.frame = MainFrame;
             DateTime dateTime = DateTime.Now;
             Manager.frame.Navigate(new Autorization());
-            TickCounter = 150;
+            TickCounter = 5;
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromMinutes(1d);
             _timer.Tick += new EventHandler(Timer_Tick);
             _timer.Start();
 
         }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             
