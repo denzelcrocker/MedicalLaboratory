@@ -46,7 +46,6 @@
             Width="350"
             FontSize="40" 
             Foreground="White" 
-            FontFamily="Bahnschrift" Click="Button_Click"
-            />
+            FontFamily="Bahnschrift" Click="Button_Click"/>
     </Grid>
 </Page>

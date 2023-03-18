@@ -9,10 +9,17 @@
     <Grid>
         <DataGrid x:Name="GridHistory" AutoGenerateColumns="False" IsReadOnly="True" d:ItemsSource="{d:SampleData ItemCount=10}" Width="400" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" ></DataGridTextColumn>
-                <DataGridTextColumn Header="Дата и время входа" Binding="{Binding Date}" ></DataGridTextColumn>
-                <DataGridTextColumn Header="Ip пользователя" Binding="{Binding Ip}"></DataGridTextColumn>
-                <DataGridTemplateColumn Width="auto">
+                <DataGridTextColumn 
+                    Header="Логин" 
+                    Binding="{Binding Login}"/>
+                <DataGridTextColumn 
+                    Header="Дата и время входа" 
+                    Binding="{Binding Date}"/>
+                <DataGridTextColumn 
+                    Header="Ip пользователя" 
+                    Binding="{Binding Ip}"/>
+                <DataGridTemplateColumn 
+                    Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                         </DataTemplate>

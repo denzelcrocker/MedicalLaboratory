@@ -20,54 +20,64 @@
                FontFamily="Bahnschrift"
                Margin="10,40,0,970"/>
             <Image 
-            HorizontalAlignment="Left"
-            Height="80"
-            Margin="1780,24,0,0"
-            VerticalAlignment="Top"
-            Width="100"
-            Source="/Images/exit.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
-            <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="244,252,1095,252" Click="Button_Services_Click">
+                HorizontalAlignment="Left"
+                Height="80"
+                Margin="1780,24,0,0"
+                VerticalAlignment="Top"
+                Width="100"
+                Source="/Images/exit.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+            <Button 
+                Height="6in" 
+                Width="6in"  
+                Style="{DynamicResource ButtonStyle1}" 
+                Margin="244,252,1095,252" 
+                Click="Button_Services_Click">
                 <Button.Content>
                     <StackPanel>
                         <Image 
-                        Source="/Images/services.png"
-                        Width="3.6in"/>
+                            Source="/Images/services.png"
+                            Width="3.6in"/>
                         <Label
-                        Content="Услуги" 
-                        FontFamily="Bahnschrift"
-                        FontSize="80" 
-                        Foreground="White"
-                        HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Button.Content>
-            </Button>
-            <Button Height="6in" Width="6in"  Style="{DynamicResource ButtonStyle1}" Margin="1100,252,244,252" Click="Button_Results_Click">
-                <Button.Content>
-                    <StackPanel>
-                        <Image 
-                        Source="/Images/results.png"
-                        Width="3.6in"/>
-                        <Label
-                        Content="Протоколы" 
-                        FontFamily="Bahnschrift"
-                        FontSize="80" 
-                        Foreground="White"
-                        HorizontalAlignment="Center"/>
+                            Content="Услуги" 
+                            FontFamily="Bahnschrift"
+                            FontSize="80" 
+                            Foreground="White"
+                            HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Button.Content>
             </Button>
             <Button 
-            x:Name="HistoryButton"
-            Style="{DynamicResource ButtonStyle1}" 
-            Content="История логинов"
-            HorizontalAlignment="Left"
-            Margin="42,921,0,89" 
-            Height="70"
-            Width="350"
-            FontSize="40" 
-            Visibility="Hidden"
-            Foreground="White" 
-            FontFamily="Bahnschrift" Click="Button_Click"/>
+                Height="6in" 
+                Width="6in"  
+                Style="{DynamicResource ButtonStyle1}" 
+                Margin="1100,252,244,252" 
+                Click="Button_Results_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <Image 
+                            Source="/Images/results.png"
+                            Width="3.6in"/>
+                        <Label
+                            Content="Протоколы" 
+                            FontFamily="Bahnschrift"
+                            FontSize="80" 
+                            Foreground="White"
+                            HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button 
+                x:Name="HistoryButton"
+                Style="{DynamicResource ButtonStyle1}" 
+                Content="История логинов"
+                HorizontalAlignment="Left"
+                Margin="42,921,0,89" 
+                Height="70"
+                Width="350"
+                FontSize="40" 
+                Visibility="Hidden"
+                Foreground="White" 
+                FontFamily="Bahnschrift" Click="Button_Click"/>
         </Grid>
     </ScrollViewer>
 </Page>

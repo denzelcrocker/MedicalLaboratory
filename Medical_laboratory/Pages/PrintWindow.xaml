@@ -42,9 +42,9 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Label
-                Grid.Column="0"
-                Content="Анализ биоматериала №"
-                FontSize="30"/>
+                    Grid.Column="0"
+                    Content="Анализ биоматериала №"
+                    FontSize="30"/>
                 <TextBlock 
                     x:Name="numberOfResult"
                     FontSize="30"
@@ -175,14 +175,14 @@
             Grid.Row="1">
             <Button 
                 x:Name="PrintButton"
-            Style="{DynamicResource ButtonStyle1}" 
-            Content="Печать"
-            HorizontalAlignment="Center"
-            Height="70"
-            Width="350"
-            FontSize="40" 
-            Foreground="White" 
-            FontFamily="Bahnschrift" Click="PrintButton_Click"/>
+                Style="{DynamicResource ButtonStyle1}" 
+                Content="Печать"
+                HorizontalAlignment="Center"
+                Height="70"
+                Width="350"
+                FontSize="40" 
+                Foreground="White" 
+                FontFamily="Bahnschrift" Click="PrintButton_Click"/>
         </Grid>
     </Grid>
 </Window>

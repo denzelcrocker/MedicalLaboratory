@@ -20,44 +20,149 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="0.4*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="BackButton" Content="BACK"  FontSize="40" Foreground="White" FontFamily="Bahnschrift" FontWeight="Black" Style="{DynamicResource ButtonStyle1}" Margin="25,5,46,5" Click="BackClick" VerticalContentAlignment="Center"/>
-            <Button x:Name="Add" Style="{DynamicResource ButtonStyle1}" Visibility="Hidden" Width ="90" Height="90" Grid.Column="1" HorizontalAlignment="Left"  ToolTip="Add Product" Click="AddButton_Click">
-                <Image Source="/Images/add.png" Stretch="Uniform" Width="60"/>
+            <Button
+                x:Name="BackButton"
+                Content="BACK"
+                FontSize="40" 
+                Foreground="White" 
+                FontFamily="Bahnschrift"
+                FontWeight="Black" 
+                Style="{DynamicResource ButtonStyle1}" 
+                Margin="25,5,46,5" 
+                Click="BackClick"
+                VerticalContentAlignment="Center"/>
+            <Button
+                x:Name="Add" 
+                Style="{DynamicResource ButtonStyle1}" 
+                Visibility="Hidden" 
+                Width ="90"
+                Height="90"
+                Grid.Column="1" 
+                HorizontalAlignment="Left" 
+                ToolTip="Add Product"
+                Click="AddButton_Click">
+                <Image 
+                    Source="/Images/add.png" 
+                    Stretch="Uniform"
+                    Width="60"/>
             </Button>
-            <TextBox x:Name="search" Style="{DynamicResource TextBoxStyle1}" MaxWidth="5in" Margin="110,5,29,5" Grid.Column="1" FontSize="60" FontFamily="Bahnschrift" TextChanged="Search" />
-            <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right" Margin ="0,0,25,0" >
-                <Button x:Name="FilerBtn" Style="{DynamicResource ButtonStyle1}" ToolTip="Filter" Width="90" Height="90" Click="FilterButton_Click">
+            <TextBox
+                x:Name="search" 
+                Style="{DynamicResource TextBoxStyle1}" 
+                MaxWidth="5in" 
+                Margin="110,5,29,5"
+                Grid.Column="1" 
+                FontSize="60"
+                FontFamily="Bahnschrift" 
+                TextChanged="Search" />
+            <StackPanel
+                Orientation="Horizontal"
+                Grid.Column="2" 
+                HorizontalAlignment="Right" 
+                Margin ="0,0,25,0" >
+                <Button
+                    x:Name="FilerBtn"
+                    Style="{DynamicResource ButtonStyle1}"
+                    ToolTip="Filter" 
+                    Width="90" 
+                    Height="90" 
+                    Click="FilterButton_Click">
                     <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Images/filter.png" Stretch="Uniform" Height="60" Margin="10,10,0,0"/>
-                            <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                        <StackPanel 
+                            Orientation="Horizontal">
+                            <Image 
+                                Source="/Images/filter.png"
+                                Stretch="Uniform" 
+                                Height="60" 
+                                Margin="10,10,0,0"/>
+                            <Path
+                                x:Name="BtnArrow" 
+                                Margin="4" 
+                                VerticalAlignment="Center" 
+                                Width="10" Fill="#FF527DB5" 
+                                Stretch="Uniform"
+                                HorizontalAlignment="Right"
+                                Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
                         </StackPanel>
                     </Button.Content>
                     <Button.ContextMenu>
                         <ContextMenu>
-                            <MenuItem x:Name="FilterByType" Header="По цене">
-                                <MenuItem x:Name="HalfMasksFilter" Header="До 300 рублей" Click="PremierFilter_Click" />
-                                <MenuItem x:Name="BandagesFilter" Header="От 300 до 700 рублей" Click="SecondFilter_Click"/>
-                                <MenuItem x:Name="MasksFilter" Header="От 700 до 1000 рублей" Click="ThirdFilter_Click"/>
-                                <MenuItem x:Name="RespiratorsFilter" Header="От 1000 рублей" Click="FourthFilter_Click"/>
+                            <MenuItem 
+                                x:Name="FilterByType" 
+                                Header="По цене">
+                                <MenuItem 
+                                    x:Name="HalfMasksFilter"
+                                    Header="До 300 рублей"
+                                    Click="PremierFilter_Click"/>
+                                <MenuItem 
+                                    x:Name="BandagesFilter" 
+                                    Header="От 300 до 700 рублей"
+                                    Click="SecondFilter_Click"/>
+                                <MenuItem 
+                                    x:Name="MasksFilter"
+                                    Header="От 700 до 1000 рублей"
+                                    Click="ThirdFilter_Click"/>
+                                <MenuItem 
+                                    x:Name="RespiratorsFilter"
+                                    Header="От 1000 рублей" 
+                                    Click="FourthFilter_Click"/>
                             </MenuItem>
-                            <MenuItem x:Name="ClearFilter" Header="Очистить фильтры" Click="ClearButton_Click" />
+                            <MenuItem
+                                x:Name="ClearFilter"
+                                Header="Очистить фильтры"
+                                Click="ClearButton_Click" />
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
-                <Button x:Name="SortBtn" Style="{DynamicResource ButtonStyle1}" Margin="6,0,0,0" Width="90" Height="90" ToolTip="Sort" Click="SortButton_Button">
+                <Button 
+                    x:Name="SortBtn" 
+                    Style="{DynamicResource ButtonStyle1}" 
+                    Margin="6,0,0,0"
+                    Width="90"
+                    Height="90" 
+                    ToolTip="Sort" 
+                    Click="SortButton_Button">
                     <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Images/sort.png" Stretch="Uniform" Width="60" Margin="10,5,0,0"/>
-                            <Path x:Name="BtnArrowSort" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                        <StackPanel 
+                            Orientation="Horizontal">
+                            <Image 
+                                Source="/Images/sort.png"
+                                Stretch="Uniform" 
+                                Width="60"
+                                Margin="10,5,0,0"/>
+                            <Path 
+                                x:Name="BtnArrowSort"
+                                Margin="4" 
+                                VerticalAlignment="Center"
+                                Width="10" 
+                                Fill="#FF527DB5" 
+                                Stretch="Uniform"
+                                HorizontalAlignment="Right" 
+                                Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
                         </StackPanel>
                     </Button.Content>
                     <Button.ContextMenu>
                         <ContextMenu >
-                            <MenuItem Name="SortByАlphabet" Foreground="Black" Header="По имени а-я" Click="SortByАlphabet_Click" />
-                            <MenuItem Name="ReverseByАlphabet" Foreground="Black" Header="По имени я-а" Click="ReverseByAlphabet_Click" />
-                            <MenuItem Name="SortByCost" Foreground="Black" Header="По возростанию цены" Click="SortByPrice_Click" />
-                            <MenuItem Name="ReverseByCost" Foreground="Black" Header="По убыванию цены" Click="ReverseByPrice_Click" />
+                            <MenuItem
+                                Name="SortByАlphabet"
+                                Foreground="Black"
+                                Header="По имени а-я"
+                                Click="SortByАlphabet_Click" />
+                            <MenuItem 
+                                Name="ReverseByАlphabet"
+                                Foreground="Black" 
+                                Header="По имени я-а"
+                                Click="ReverseByAlphabet_Click" />
+                            <MenuItem 
+                                Name="SortByCost" 
+                                Foreground="Black" 
+                                Header="По возростанию цены"
+                                Click="SortByPrice_Click" />
+                            <MenuItem 
+                                Name="ReverseByCost"
+                                Foreground="Black" 
+                                Header="По убыванию цены" 
+                                Click="ReverseByPrice_Click" />
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
