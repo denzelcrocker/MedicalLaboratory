@@ -32,7 +32,7 @@ namespace Medical_laboratory
             Manager.frame = MainFrame;
             DateTime dateTime = DateTime.Now;
             Manager.frame.Navigate(new Autorization());
-            TickCounter = 5;
+            TickCounter = 150;
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromMinutes(1d);
             _timer.Tick += new EventHandler(Timer_Tick);

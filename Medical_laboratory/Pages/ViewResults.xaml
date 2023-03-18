@@ -94,6 +94,7 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock
                                 Grid.Column="0"
@@ -133,6 +134,21 @@
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
                                 Margin="10"/>
+                            <Button 
+                                Grid.Column="4"
+                                x:Name="PrintButton"
+                                HorizontalAlignment="Right"
+                                Margin="0,0,10,0"
+                                Style="{DynamicResource ButtonStyle1}"
+                                Width="75" 
+                                Height="75" 
+                                Click="PrintButton_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Images/printer.png" Stretch="Uniform" Height="60"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
                         </Grid>
                     </Border>
                 </DataTemplate>

@@ -18,6 +18,7 @@
     <None Remove="Pages\log-out.png" />
     <None Remove="Pages\loupe.png" />
     <None Remove="Pages\OpenEye.png" />
+    <None Remove="Pages\printer.png" />
     <None Remove="Pages\results.png" />
     <None Remove="Pages\services.png" />
     <None Remove="Pages\sort.png" />
@@ -51,6 +52,7 @@
     <Resource Include="Images\filter.png" />
     <Resource Include="Images\exit.png" />
     <Resource Include="Images\loupe.png" />
+    <Resource Include="Images\printer.png" />
   </ItemGroup>
 
   <ItemGroup>

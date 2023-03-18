@@ -265,5 +265,12 @@ namespace Medical_laboratory.Pages
             switching.Countlist = currentResults.Count;
             LViewTours.ItemsSource = currentList.Skip(0).Take(switching.CountPage).ToList();
         }
+
+        private void PrintButton_Click(object sender, RoutedEventArgs e)
+        {
+            Result result = (sender as Button)?.DataContext as Result;
+            PrintWindow print = new PrintWindow(result);
+            print.Show();
+        }
     }
 }

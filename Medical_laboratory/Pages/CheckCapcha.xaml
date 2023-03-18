@@ -37,7 +37,7 @@
             Foreground="#003d34" 
             FontWeight="Normal" 
             FontStyle="Normal" 
-            FontFamily="Bahnschrift" Margin="0,350,0,579"/>
+            FontFamily="Bahnschrift" Margin="0,344,0,585"/>
         <Button 
             Style="{DynamicResource ButtonStyle1}" 
             Content="Подтвердить" HorizontalAlignment="Center"

@@ -58,11 +58,8 @@ namespace Medical_laboratory.Pages
             closedEye.Visibility = Visibility.Visible;
             password1.Text = password.Password;
         }
-        private void Reg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Manager.frame.Navigate(new Registration());
-        }
-        private void Enter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             History history = new History();
             string hostName = Dns.GetHostName();
@@ -104,7 +101,7 @@ namespace Medical_laboratory.Pages
                     Manager.frame.Navigate(new MainPage(isEmployee));
                 }
             }
-            if (checkAutorization  == false)
+            if (checkAutorization == false)
             {
                 if (countForCapcha == 0)
                 {
@@ -114,10 +111,15 @@ namespace Medical_laboratory.Pages
                 }
                 else
                 {
-                    MessageBox.Show($"Неверный логин или пароль, осталось попыток: {countForCapcha}") ;
+                    MessageBox.Show($"Неверный логин или пароль, осталось попыток: {countForCapcha}");
                     countForCapcha--;
                 }
             }
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.frame.Navigate(new Registration());
         }
     }
 }

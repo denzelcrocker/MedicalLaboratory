@@ -31,7 +31,7 @@
                  x:Name="login" 
                  TextWrapping="Wrap" 
                  TextChanged="login_TextChanged" 
-                 Height="60"
+                 Height="70"
                  Width="520"
                  FontSize="40" 
                  TextAlignment="Left"/>
@@ -52,14 +52,14 @@
                      x:Name="password" 
                      Grid.ColumnSpan="2"
                      Width="520"
-                     Height="60"
+                     Height="70"
                      HorizontalAlignment="Stretch"
                      FontSize="35" />
                 <TextBox Style="{DynamicResource TextBoxStyle1}" 
                      x:Name="password1" 
                      Grid.ColumnSpan="2"
                      Width="520"
-                     Height="60"
+                     Height="70"
                      HorizontalAlignment="Stretch" 
                      FontSize="35"/>
                 <Image 
@@ -79,32 +79,31 @@
                      Source="/Images/openEye.png"
                      MouseLeftButtonDown="openEye_MouseLeftButtonDown"/>
             </Grid>
-            <TextBlock x:Name="Click"
-                   Text="Вход" 
-                   TextDecorations="Underline" 
-                   TextAlignment="Center"
-                   TextWrapping="WrapWithOverflow"
-                   HorizontalAlignment="Center"
-                   Width="150"
-                   FontWeight="Bold" 
-                   Foreground="#003d34"
-                   FontSize="50"
-                   FontFamily="Bahnschrift" 
-                   Cursor="Hand" MouseLeftButtonDown="Enter_MouseLeftButtonDown"/>
-            <TextBlock x:Name="RegistrationClick"
-                   Text="Зарегистрироваться"
-                   TextDecorations="Underline" 
-                   TextAlignment="Center"
-                   TextWrapping="WrapWithOverflow"
-                   HorizontalAlignment="Center"
-                   Width="298"
-                   FontWeight="Bold" 
-                   Foreground="#003d34"
-                   FontSize="30"
-                   FontFamily="Bahnschrift" 
-                   Margin="0,64,0,0"
-                   Cursor="Hand" 
-                   MouseLeftButtonDown="Reg_MouseLeftButtonDown"/>
+            <Button 
+                x:Name="LoginButton"
+                IsDefault = "true"
+                Style="{DynamicResource ButtonStyle1}" 
+                Content="Войти" 
+                HorizontalAlignment="Center"
+                Margin="0,40"
+                Height="70"
+                Width="400"
+                FontSize="40" 
+                Foreground="White" 
+                FontFamily="Bahnschrift" 
+                Click="LoginButton_Click"/>
+            <Button 
+                x:Name="RegisterButton"
+                Style="{DynamicResource ButtonStyle1}" 
+                Content="Зарегистрироваться" 
+                HorizontalAlignment="Center"
+                Margin="0,0"
+                Height="70"
+                Width="400"
+                FontSize="40" 
+                Foreground="White" 
+                FontFamily="Bahnschrift"
+                Click="RegisterButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>
